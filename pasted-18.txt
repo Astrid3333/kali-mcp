@@ -1,0 +1,95 @@
+(1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 1.5 MB/s eta 0:00:00
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 1.7 MB/s eta 0:00:00
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 2.1 MB/s eta 0:00:00
+WARNING: Skipping /usr/lib/python3.12/dist-packages/pybind11-2.11.1.dist-info due to invalid metadata entry 'name'
+Installing collected packages: mpmath, sympy, setuptools, torch
+Successfully installed mpmath-1.3.0 setuptools-78.1.0 sympy-1.14.0 torch-2.15.0+cpu
+WARNING: Skipping /usr/lib/python3.12/dist-packages/pybind11-2.11.1.dist-info due to invalid metadata entry 'name'
+Collecting resemblyzer
+  Downloading Resemblyzer-0.1.4-py3-none-any.whl.metadata (5.8 kB)
+Requirement already satisfied: librosa>=0.9.1 in ./.local/lib/python3.12/site-packages (from resemblyzer) (1.0.1)
+Requirement already satisfied: numpy>=1.20.0 in ./.local/lib/python3.12/site-packages (from resemblyzer) (2.5.5)
+Collecting webrtcvad>=2.0.10 (from resemblyzer)
+  Downloading webrtcvad-2.0.10.tar.gz (66 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.2/66.2 kB 53.7 kB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: torch>=1.0.1 in ./.local/lib/python3.12/site-packages (from resemblyzer) (2.15.0+cpu)
+Requirement already satisfied: scipy>=1.2.1 in ./.local/lib/python3.12/site-packages (from resemblyzer) (1.18.1)
+Collecting typing (from resemblyzer)
+  Downloading typing-3.7.4.3.tar.gz (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.6/78.6 kB 72.3 kB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: numba>=0.61.0 in ./.local/lib/python3.12/site-packages (from librosa>=0.9.1->resemblyzer) (0.66.0)
+Requirement already satisfied: scikit-learn>=1.6.0 in ./.local/lib/python3.12/site-packages (from librosa>=0.9.1->resemblyzer) (1.9.0)
+Requirement already satisfied: joblib>=1.2.0 in ./.local/lib/python3.12/site-packages (from librosa>=0.9.1->resemblyzer) (1.5.3)
+Requirement already satisfied: decorator>=5.2.1 in ./.local/lib/python3.12/site-packages (from librosa>=0.9.1->resemblyzer) (5.3.1)
+Requirement already satisfied: soundfile>=0.12.1 in ./.local/lib/python3.12/site-packages (from librosa>=0.9.1->resemblyzer) (0.14.0)
+Requirement already satisfied: pooch>=1.7.0 in ./.local/lib/python3.12/site-packages (from librosa>=0.9.1->resemblyzer) (1.9.0)
+Requirement already satisfied: soxr>=1.0.0 in ./.local/lib/python3.12/site-packages (from librosa>=0.9.1->resemblyzer) (1.1.0)
+Requirement already satisfied: lazy_loader>=0.3 in ./.local/lib/python3.12/site-packages (from librosa>=0.9.1->resemblyzer) (0.6)
+Requirement already satisfied: msgpack>=1.0.5 in ./.local/lib/python3.12/site-packages (from librosa>=0.9.1->resemblyzer) (1.2.4)
+Requirement already satisfied: filelock in ./.local/lib/python3.12/site-packages (from torch>=1.0.1->resemblyzer) (3.32.7)
+Requirement already satisfied: typing-extensions>=4.13.0 in ./.local/lib/python3.12/site-packages (from torch>=1.0.1->resemblyzer) (4.16.0)
+Requirement already satisfied: setuptools>=77.0.3 in ./.local/lib/python3.12/site-packages (from torch>=1.0.1->resemblyzer) (78.1.0)
+Requirement already satisfied: sympy>=1.13.3 in ./.local/lib/python3.12/site-packages (from torch>=1.0.1->resemblyzer) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in ./.local/lib/python3.12/site-packages (from torch>=1.0.1->resemblyzer) (3.6.1)
+Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from torch>=1.0.1->resemblyzer) (3.1.2)
+Requirement already satisfied: fsspec>=0.8.5 in ./.local/lib/python3.12/site-packages (from torch>=1.0.1->resemblyzer) (2026.9.0)
+Requirement already satisfied: packaging in ./.local/lib/python3.12/site-packages (from lazy_loader>=0.3->librosa>=0.9.1->resemblyzer) (26.3)
+Requirement already satisfied: llvmlite<0.49,>=0.48.0dev0 in ./.local/lib/python3.12/site-packages (from numba>=0.61.0->librosa>=0.9.1->resemblyzer) (0.48.0)
+Collecting numpy>=1.20.0 (from resemblyzer)
+  Downloading numpy-2.4.6-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Requirement already satisfied: platformdirs>=2.5.0 in ./.local/lib/python3.12/site-packages (from pooch>=1.7.0->librosa>=0.9.1->resemblyzer) (4.13.6)
+Requirement already satisfied: requests>=2.19.0 in ./.local/lib/python3.12/site-packages (from pooch>=1.7.0->librosa>=0.9.1->resemblyzer) (2.34.2)
+Requirement already satisfied: narwhals>=2.0.1 in ./.local/lib/python3.12/site-packages (from scikit-learn>=1.6.0->librosa>=0.9.1->resemblyzer) (2.24.0)
+Requirement already satisfied: threadpoolctl>=3.5.0 in ./.local/lib/python3.12/site-packages (from scikit-learn>=1.6.0->librosa>=0.9.1->resemblyzer) (3.6.0)
+Requirement already satisfied: cffi>=1.0 in ./.local/lib/python3.12/site-packages (from soundfile>=0.12.1->librosa>=0.9.1->resemblyzer) (2.1.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./.local/lib/python3.12/site-packages (from sympy>=1.13.3->torch>=1.0.1->resemblyzer) (1.3.0)
+Requirement already satisfied: pycparser in ./.local/lib/python3.12/site-packages (from cffi>=1.0->soundfile>=0.12.1->librosa>=0.9.1->resemblyzer) (3.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.local/lib/python3.12/site-packages (from requests>=2.19.0->pooch>=1.7.0->librosa>=0.9.1->resemblyzer) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in ./.local/lib/python3.12/site-packages (from requests>=2.19.0->pooch>=1.7.0->librosa>=0.9.1->resemblyzer) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in ./.local/lib/python3.12/site-packages (from requests>=2.19.0->pooch>=1.7.0->librosa>=0.9.1->resemblyzer) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in ./.local/lib/python3.12/site-packages (from requests>=2.19.0->pooch>=1.7.0->librosa>=0.9.1->resemblyzer) (2026.10.23)
+Downloading Resemblyzer-0.1.4-py3-none-any.whl (15.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 1.5 MB/s eta 0:00:00
+Downloading numpy-2.4.6-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 1.3 MB/s eta 0:00:00
+Building wheels for collected packages: webrtcvad, typing
+  Building wheel for webrtcvad (setup.py) ... done
+  Created wheel for webrtcvad: filename=webrtcvad-2.0.10-cp312-cp312-linux_x86_64.whl size=74580 sha256=9a7f3e5ff1e220101485fb6301feb250a70e7aec4fa9930ecedbd2a6fe0f07fc
+  Stored in directory: /home/astrid/.cache/pip/wheels/1e/d3/95/680fa3b16848f1a58d2edaed34c496224c89a9bc63e17b3614
+  Building wheel for typing (setup.py) ... done
+  Created wheel for typing: filename=typing-3.7.4.3-py3-none-any.whl size=26395 sha256=84d1c47acafa09e5d57506620969d5c93db17d81e0843119de71dfda02a92b50
+  Stored in directory: /home/astrid/.cache/pip/wheels/12/98/52/2bffe242a9a487f00886e43b8ed8dac46456702e11a0d6abef
+Successfully built webrtcvad typing
+WARNING: Skipping /usr/lib/python3.12/dist-packages/pybind11-2.11.1.dist-info due to invalid metadata entry 'name'
+Installing collected packages: webrtcvad, typing, numpy, resemblyzer
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.5.5
+    Uninstalling numpy-2.5.5:
+      Successfully uninstalled numpy-2.5.5
+Successfully installed numpy-2.4.6 resemblyzer-0.1.4 typing-3.7.4.3 webrtcvad-2.0.10
+astrid@astrid-B85-HD3-A:~$ pip3 install --break-system-packages "numpy<2"
+Defaulting to user installation because normal site-packages is not writeable
+WARNING: Skipping /usr/lib/python3.12/dist-packages/pybind11-2.11.1.dist-info due to invalid metadata entry 'name'
+Collecting numpy<2
+  Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 453.2 kB/s eta 0:00:00
+Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.0/18.0 MB 2.8 MB/s eta 0:00:00
+WARNING: Skipping /usr/lib/python3.12/dist-packages/pybind11-2.11.1.dist-info due to invalid metadata entry 'name'
+Installing collected packages: numpy
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.4.6
+    Uninstalling numpy-2.4.6:
+      Successfully uninstalled numpy-2.4.6
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+brian2 2.10.1 requires numpy>=2.0.0, but you have numpy 1.26.4 which is incompatible.
+librosa 1.0.1 requires numpy>=2.1.0, but you have numpy 1.26.4 which is incompatible.
+pennylane 0.45.1 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+scipy 1.18.1 requires numpy<2.8,>=2.0.0, but you have numpy 1.26.4 which is incompatible.
+Successfully installed numpy-1.26.4
+astrid@astrid-B85-HD3-A:~$ 
