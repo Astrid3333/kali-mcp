@@ -1,0 +1,50 @@
+============================================================
+🧪 PRUEBA 3: searchsploit - buscar exploits CUPS 2.4
+============================================================
+🔧 Herramienta: kali_searchsploit
+📋 Comando ejecutado: searchsploit CUPS 2.4 
+📊 Código de salida: 0
+
+📤 Salida:
+Exploits: No Results
+Shellcodes: No Results
+
+
+
+============================================================
+🧪 PRUEBA 4: exiftool - metadatos de /etc/hostname
+============================================================
+🔧 Herramienta: kali_exiftool
+📋 Comando ejecutado: exiftool  /etc/hostname
+📊 Código de salida: 0
+
+📤 Salida:
+ExifTool Version Number         : 13.55
+File Name                       : hostname
+Directory                       : /etc
+File Size                       : 13 bytes
+File Modification Date/Time     : 2026:11:05 20:38:23+00:00
+File Access Date/Time           : 2026:11:05 21:18:39+00:00
+File Inode Change Date/Time     : 2026:11:05 20:38:23+00:00
+File Permissions                : -rw-r--r--
+File Type                       : TXT
+File Type Extension             : txt
+MIME Type                  
+
+============================================================
+🧪 PRUEBA 5: nikto contra el servidor MCP (puerto 5000 interno)
+============================================================
+🔧 Herramienta: kali_nikto
+📋 Comando ejecutado: nikto -h http://127.0.0.1:5000 -Tuning 4
+📊 Código de salida: 0
+
+📤 Salida:
+- Nikto v2.6.1
+---------------------------------------------------------------------------
++ [FAIL] Unable to connect to 127.0.0.1:5000.
+
+
+⚠️ Errores:
+Argument "Unable to connect to 127.0.0.1:5000" isn't numeric in numeric ne (!=) at /var/lib/nikto/nikto.pl line 155.
+
+

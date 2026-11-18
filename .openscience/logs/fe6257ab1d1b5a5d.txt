@@ -1,0 +1,14 @@
+2026-11-18 02:22:38,643 [INFO] Starting Kali Linux Tools API Server on 127.0.0.1:5001
+ * Serving Flask app 'server'
+ * Debug mode: off
+2026-11-18 02:22:38,649 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2026-11-18 02:22:38,649 [INFO] [33mPress CTRL+C to quit[0m
+astrid    158304  0.0  0.2 228784 66420 ?        Sl   Nov17   0:01 python3 freecad_mcp_server.py
+astrid    158311  0.0  0.8 1219844 273644 ?      Sl   Nov17   0:04 .venv/bin/python server.py
+astrid    158319  0.0  0.2 668248 79196 ?        Sl   Nov17   0:02 .venv/bin/python unreal_mcp_server.py
+
+
+<shell_metadata>
+shell tool terminated command after exceeding timeout 20000 ms. If this command is expected to take longer and is not waiting for interactive input, retry with a larger timeout value in milliseconds.
+</shell_metadata>

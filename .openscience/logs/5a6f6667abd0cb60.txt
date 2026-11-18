@@ -1,0 +1,19 @@
+2026-11-18 03:32:29,672 [INFO] Starting Kali Linux Tools API Server on 127.0.0.1:5001
+ * Serving Flask app 'server'
+ * Debug mode: off
+2026-11-18 03:32:29,675 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2026-11-18 03:32:29,675 [INFO] [33mPress CTRL+C to quit[0m
+2026-11-18 03:32:34,464 [INFO] Executing command: ['which', 'nmap']
+2026-11-18 03:32:34,466 [INFO] Executing command: ['which', 'gobuster']
+2026-11-18 03:32:34,468 [INFO] Executing command: ['which', 'dirb']
+2026-11-18 03:32:34,470 [INFO] Executing command: ['which', 'nikto']
+2026-11-18 03:32:34,473 [INFO] 127.0.0.1 - - [18/Nov/2026 03:32:34] "GET /health HTTP/1.1" 200 -
+{"all_essential_tools_available":true,"message":"Kali Linux Tools API Server is running","status":"healthy","tools_status":{"dirb":true,"gobuster":true,"nikto":true,"nmap":true}}
+---
+astrid    294958  4.1  0.1 266316 33044 ?        S    03:32   0:00 .venv/bin/python server.py
+
+
+<shell_metadata>
+shell tool terminated command after exceeding timeout 120000 ms. If this command is expected to take longer and is not waiting for interactive input, retry with a larger timeout value in milliseconds.
+</shell_metadata>

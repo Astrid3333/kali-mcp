@@ -1,0 +1,11 @@
+OK
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Location: /tmp/mcp-free-cad-/AICopilot/freecad_mcp_handler.py:486:12
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Location: /tmp/mcp-free-cad-/AICopilot/freecad_mcp_handler.py:492:12
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Location: /tmp/mcp-free-cad-/AICopilot/freecad_mcp_handler.py:818:8
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Location: /tmp/mcp-free-cad-/AICopilot/freecad_mcp_handler.py:909:12
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Location: /tmp/mcp-free-cad-/AICopilot/freecad_mcp_handler.py:914:12

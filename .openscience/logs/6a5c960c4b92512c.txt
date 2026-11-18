@@ -1,0 +1,28 @@
+============================================================
+🧪 PRUEBA 1: nuclei contra Juice Shop
+============================================================
+🔧 Herramienta: kali_nuclei
+📋 Comando ejecutado: nuclei -u http://localhost:3000 -severity low,medium,high,critical -timeout 20
+📊 Código de salida: 0
+
+⚠️ Errores:
+
+                     __     _
+   ____  __  _______/ /__  (_)
+  / __ \/ / / / ___/ / _ \/ /
+ / / / / /_/ / /__/ /  __/ /
+/_/ /_/\__,_/\___/_/\___/_/   v3.11.1
+
+		projectdiscovery.io
+
+[[34mINF[0m] Current nuclei version: v3.11.1 ([92mlatest[0m)
+[[34mINF[0m] Current nuclei-templates version: v10.5.1 ([92mlatest[0m)
+[[34mINF[0m] New templates added in latest release: 68
+[[34mINF[0m] Templates loaded for current scan: 7137
+[[34mINF[0m] Executing 7137 signed templates from projectdiscovery/nuclei-templates
+[[34mINF[0m] Targets loaded for current scan: 1
+[[34mINF[0m] Templates clustered: 475 (Reduced 408 Requests)
+[[34mINF[0m] Skipped localhost:3000 from target list as found unresponsive permanently: Post "http://localhost:3000/WEB_VMS/LEVEL15/": cause="port closed or filtered" address=localhost:3000 chain="connection refused"
+[[34mINF[0m] Skipped localhost:3000 from target list as found unresponsive permanently: Post "http://localhost:3000/webadm/?q=moni_detail.do&action=gragh": cause="port closed or filtered" address=localhost:3000 chain="connection refused"
+[[34mINF[0m] Skipped localhost:3000 from target list as found unresponsive permanently: Get "http://localhost:3000": cause="port closed or filtered" address=localhost:3000 chain="connection refused"
+[[34mINF[0m] Skipped localhost:3000 from t

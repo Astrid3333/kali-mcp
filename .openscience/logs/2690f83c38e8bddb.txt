@@ -1,0 +1,5 @@
+freecad_mcp_handler.py: OK
+macro_ops.py: OK
+crash_watcher.py: OK
+freecad_debug.py: OK
+freecad_health.py: OK

@@ -1,0 +1,33 @@
+--- kali_exiftool ---
+🔧 Herramienta: kali_exiftool
+📋 Comando ejecutado: exiftool  /etc/hostname
+📊 Código de salida: 0
+
+📤 Salida:
+ExifTool Version Number         : 13.55
+File Name                       : hostname
+Directory                       : /etc
+File Size                       : 13 bytes
+File Modification Date/Time     : 2026:11:05 20:38:23+00:00
+File Access Date/Time           : 2026:11:05 21:18:39+00:00
+File Inode Change Date/Time     : 2026:11:05 20:38:23+00:00
+File Permissions                : -rw-r--r--
+Fil
+
+--- kali_amass ---
+🔧 Herramienta: kali_amass
+📋 Comando ejecutado: amass -d example.com -enum -timeout 15
+📊 Código de salida: 1
+
+⚠️ Errores:
+
+        .+++:.            :                             .+++.
+      +W@@@@@@8        &+W@#               o8W8:      +W@@@@@@#.   oW@@@W#+
+     &@#+   .o@##.    .@@@o@W.o@@o       :@@#&W8o    .@#:  .:oW+  .@#+++&#&
+    +@&        &@&     #@8 +@W@&8@+     :@W.   +@8   +@:          .@8
+    8@          @@     8@o  8@8  WW    .@W      W@+  .@W.          o@#:
+    WW          &@o    &@:  o@+  o@+   #@.      8@o   +W@#+.        +W@8:
+    #@          :@W    &@+  &@+   @8  :@o       o@o     oW@@W+        oW@8
+    o@+          @@&   &@+  &@+   #@  &@.      .W@W       .+#@&         o@W.
+     WW         +@W@8. &@+  :&    o@+ #@      :@W&@&         &@:  ..     :@o
+     :@W:      o@# 

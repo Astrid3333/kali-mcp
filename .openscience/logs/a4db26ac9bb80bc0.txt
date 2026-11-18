@@ -1,0 +1,26 @@
+✅ Servidor MCP cargado con 18 herramientas
+   - kali_nmap: Escaneo de puertos y servicios con Nmap
+   - kali_nikto: Escáner de vulnerabilidades web con Nikto
+   - kali_sqlmap: Detección y explotación de inyección SQL con sqlmap
+   - kali_nuclei: Escaneo de vulnerabilidades con plantillas Nuclei
+   - kali_ffuf: Fuzzing web con ffuf
+   - kali_subfinder: Enumeración de subdominios con subfinder
+   - kali_netexec: Pruebas contra SMB, LDAP, WinRM, SSH con netexec
+   - kali_responder: Envenenamiento LLMNR/NBT-NS/mDNS con Responder
+   - kali_hashcat: Cracking de contraseñas con hashcat
+   - kali_binwalk: Análisis de firmware y extracción de archivos con binwalk
+   - kali_masscan: Escaneo de puertos ultra rápido con masscan
+   - kali_wpscan: Auditoría de WordPress con wpscan
+   - kali_hydra: Ataque de fuerza bruta con Hydra
+   - kali_john: Cracking de contraseñas con John the Ripper
+   - kali_dirb: Búsqueda de directorios web con dirb
+   - kali_gobuster: Búsqueda de directorios y DNS con gobuster
+   - kali_command: Ejecuta cualquier comando personalizado dentro del contenedo...
+   - kali_health: Verifica que el contenedor Kali esté operativo
+
+🔍 Prueba de salud:
+✅ Contenedor Kali MCP operativo
+Comando de prueba: nmap --version | head -1
+Salida: Nmap version 7.991 ( https://nmap.org )
+Platform: x86_64-pc-linux-gnu
+Compiled with: liblua-5.4.9 openssl-3.6.5 libs

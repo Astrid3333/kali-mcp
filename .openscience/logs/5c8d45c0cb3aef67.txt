@@ -1,0 +1,29 @@
+==============================================
+  CONFIGURACIÓN TLS PARA SERVIDORES MCP
+==============================================
+
+--- Configurando mcp-ecosystem-chiloe ---
+  ✅ Certificados ya existen en /home/astrid/Documents/OpenScience/projects/githu/mcp-ecosystem-chiloe
+  ✅ Configuración TLS creada: /home/astrid/Documents/OpenScience/projects/githu/mcp-ecosystem-chiloe/tls-config.env
+
+--- Configurando codigos-potenciados ---
+  ✅ Certificados ya existen en /home/astrid/Documents/OpenScience/projects/githu/codigos-potenciados
+  ✅ Configuración TLS creada: /home/astrid/Documents/OpenScience/projects/githu/codigos-potenciados/tls-config.env
+
+--- Configurando octave-mcp ---
+  ✅ Certificados ya existen en /tmp/octave-mcp-analysis
+  ✅ Configuración TLS creada: /tmp/octave-mcp-analysis/tls-config.env
+
+==============================================
+  CONFIGURACIÓN TLS COMPLETADA
+==============================================
+
+Próximos pasos:
+  1. Modificar cada servidor MCP para usar TLS con los certificados
+  2. Reiniciar los servidores MCP
+  3. Verificar con: ./verify-cert.sh
+
+Archivos de configuración creados:
+  - mcp-ecosystem-chiloe/tls-config.env
+  - codigos-potenciados/tls-config.env
+  - octave-mcp/tls-config.env

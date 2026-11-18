@@ -1,0 +1,35 @@
+astrid    158386  0.0  0.1 222108 59552 ?        Sl   Nov17   0:01 .venv/bin/python server.py
+astrid    175421  0.0  0.8 1219760 273432 ?      Sl   Nov17   0:04 .venv/bin/python server.py
+astrid    175454  0.0  0.1 219220 59340 ?        Sl   Nov17   0:01 .venv/bin/python server.py
+astrid    175469  0.0  0.2 234960 74316 ?        Sl   Nov17   0:02 /home/astrid/Documents/OpenScience/projects/New-project/mcp/compose-guard/.venv/bin/python /home/astrid/Documents/OpenScience/projects/New-project/mcp/compose-guard/server.py
+astrid    175479  0.0  0.1 221088 59600 ?        Sl   Nov17   0:01 .venv/bin/python server.py
+astrid    256271  0.0  0.8 1219772 273924 ?      Sl   01:36   0:04 .venv/bin/python server.py
+astrid    256302  0.0  0.1 219216 59188 ?        Sl   01:36   0:01 .venv/bin/python server.py
+astrid    256320  0.0  0.2 234960 74228 ?        Sl   01:36   0:01 /home/astrid/Documents/OpenScience/projects/New-project/mcp/compose-guard/.venv/bin/python /home/astrid/Documents/OpenScience/projects/New-project/mcp/compose-guard/server.py
+astrid    256326  0.0  0.1 222112 59496 ?        Sl   01:36   0:01 .venv/bin/python server.py
+astrid    260532  0.0  0.0  10888  1740 ?        Ssl  01:59   0:00 /usr/lib/claude-desktop-unofficial/resources/disclaimer --pgroup -- /home/astrid/psyche-env/bin/python3 /home/astrid/psyche-mcp/server.py
+astrid    260533  0.0  0.5 1069080 164304 ?      Sl   01:59   0:03 /home/astrid/psyche-env/bin/python3 /home/astrid/psyche-mcp/server.py
+astrid    260535  0.0  0.0  10888  1740 ?        Ssl  01:59   0:00 /usr/lib/claude-desktop-unofficial/resources/disclaimer --pgroup -- /home/astrid/physics-env/bin/python3 /home/astrid/physics-mcp/server.py
+astrid    260536  0.0  0.3 995048 105460 ?       Sl   01:59   0:02 /home/astrid/physics-env/bin/python3 /home/astrid/physics-mcp/server.py
+astrid    260538  0.0  0.0  10888  1736 ?        Ssl  01:59   0:00 /usr/lib/claude-desktop-unofficial/resources/disclaimer --pgroup -- /home/astrid/microbio-env/bin/python3 /home/astrid/microbio-mcp/server.py
+astrid    260539  0.0  0.3 994852 105060 ?       Sl   01:59   0:02 /home/astrid/microbio-env/bin/python3 /home/astrid/microbio-mcp/server.py
+astrid    260542  0.0  0.0  10888  1736 ?        Ssl  01:59   0:00 /usr/lib/claude-desktop-unofficial/resources/disclaimer --pgroup -- /home/astrid/basico-env/bin/python3 /home/astrid/biosim-mcp/server.py
+astrid    260550  0.0  0.4 708640 157416 ?       Sl   01:59   0:02 /home/astrid/basico-env/bin/python3 /home/astrid/biosim-mcp/server.py
+astrid    260570  0.0  0.0  10888  1740 ?        Ssl  01:59   0:00 /usr/lib/claude-desktop-unofficial/resources/disclaimer --pgroup -- /bin/bash -lc cd /mnt/disco2/OpenScience/sessions/2026-10-23-0117 && exec python3 mcp/bench_server.py
+astrid    260571  0.0  0.0  24376 13428 ?        S    01:59   0:00 python3 mcp/bench_server.py
+astrid    260574  0.0  0.0  10888  1740 ?        Ssl  01:59   0:00 /usr/lib/claude-desktop-unofficial/resources/disclaimer --pgroup -- /home/astrid/octave-mcp/.venv/bin/python /home/astrid/octave-mcp/server.py
+astrid    260581  0.0  0.8 1220296 273784 ?      Sl   01:59   0:04 /home/astrid/octave-mcp/.venv/bin/python /home/astrid/octave-mcp/server.py
+astrid    260645  0.0  0.0  10888  1740 ?        Ssl  01:59   0:00 /usr/lib/claude-desktop-unofficial/resources/disclaimer --pgroup -- /usr/bin/python3 /mnt/disco2/OpenScience/projects/githu/mcp-ecosystem-chiloe/servidores-propios/sbtcvm_mcp_server.py
+astrid    260647  0.0  0.1 221588 59408 ?        Sl   01:59   0:01 /usr/bin/python3 /mnt/disco2/OpenScience/projects/githu/mcp-ecosystem-chiloe/servidores-propios/sbtcvm_mcp_server.py
+astrid    260664  0.0  0.0  10888  1744 ?        Ssl  01:59   0:00 /usr/lib/claude-desktop-unofficial/resources/disclaimer --pgroup -- /usr/bin/python3 /mnt/disco2/OpenScience/projects/githu/mcp-ecosystem-chiloe/server.py
+astrid    260665  0.0  0.1 221440 59400 ?        Sl   01:59   0:01 /usr/bin/python3 /mnt/disco2/OpenScience/projects/githu/mcp-ecosystem-chiloe/server.py
+astrid    266754  0.1  0.8 1219784 273688 ?      Sl   02:12   0:04 .venv/bin/python server.py
+astrid    266784  0.0  0.1 219220 59296 ?        Sl   02:12   0:01 .venv/bin/python server.py
+astrid    266804  0.0  0.2 234956 74328 ?        Sl   02:12   0:02 /home/astrid/Documents/OpenScience/projects/New-project/mcp/compose-guard/.venv/bin/python /home/astrid/Documents/OpenScience/projects/New-project/mcp/compose-guard/server.py
+astrid    266810  0.0  0.1 222112 59728 ?        Sl   02:12   0:01 .venv/bin/python server.py
+astrid    292665  6.6  0.1  45120 33076 ?        S    03:19   0:00 .venv/bin/python server.py
+
+
+<shell_metadata>
+shell tool terminated command after exceeding timeout 120000 ms. If this command is expected to take longer and is not waiting for interactive input, retry with a larger timeout value in milliseconds.
+</shell_metadata>

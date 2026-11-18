@@ -1,0 +1,231 @@
+\udc90\udcf7:: command not found
+\udca0m:: command not found
+astrid@astrid-B85-HD3-A:~$    cd ~/codigos-potenciados
+   git log --oneline -10
+   git show --stat 8b02b9f
+   tree -L 2 -I '.git|node_modules|__pycache__'
+bash: cd: /home/astrid/codigos-potenciados: No such file or directory
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+Command 'tree' not found, but can be installed with:
+sudo apt install tree
+astrid@astrid-B85-HD3-A:~$ find ~ -type d -name .git -not -path '*/node_modules/*' 2>/dev/null | xargs -I{} sh -c 'cd "$(dirname {})" && git remote -v 2>/dev/null | grep -q codigos-potenciados && pwd'
+/home/astrid/Documents/OpenScience/projects/githu
+astrid@astrid-B85-HD3-A:~$  Ver qué servicios están corriendo
+sudo systemctl list-units --type=service --state=running
+
+# Desactivar CUPS si no usas impresora
+sudo systemctl disable cups
+sudo systemctl stop cups
+
+# Verificar usuarios de MySQL
+sudo mysql -u root -e "SELECT User, Host FROM mysql.user;"
+
+# Mantener el sistema actualizado
+sudo apt update && sudo apt upgrade
+Command 'Ver' not found, did you mean:
+  command 'ner' from deb frog (0.20-2build5)
+Try: sudo apt install <deb name>
+[sudo] password for astrid:     
+  UNIT                                  LOAD   ACTIVE SUB     DESCRIPTION      >
+  accounts-daemon.service               loaded active running Accounts Service
+  avahi-daemon.service                  loaded active running Avahi mDNS/DNS-SD>
+  bluetooth.service                     loaded active running Bluetooth service
+  clamav-daemon.service                 loaded active running Clam AntiVirus us>
+  colord.service                        loaded active running Manage, Install a>
+  containerd.service                    loaded active running containerd contai>
+  cron.service                          loaded active running Regular backgroun>
+  cups-browsed.service                  loaded active running Make remote CUPS >
+  cups.service                          loaded active running CUPS Scheduler
+  dbus.service                          loaded active running D-Bus System Mess>
+  docker.service                        loaded active running Docker Applicatio>
+  fwupd.service                         loaded active running Firmware update d>
+  getty@tty1.service                    loaded active running Getty on tty1
+  irqbalance.service                    loaded active running irqbalance daemon
+  kerneloops.service                    loaded active running Tool to automatic>
+  lightdm.service                       loaded active running Light Display Man>
+  me.proton.vpn.split_tunneling.service loaded active running Proton VPN Daemon
+  ModemManager.service                  loaded active running Modem Manager
+  mullvad-daemon.service                loaded active running Mullvad VPN daemon
+  mysql.service                         loaded active running MySQL Community S>
+  networkd-dispatcher.service           loaded active running Dispatcher daemon>
+  NetworkManager.service                loaded active running Network Manager
+Synchronizing state of cups.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install disable cups
+qRemoved "/etc/systemd/system/printer.target.wants/cups.service".
+Removed "/etc/systemd/system/sockets.target.wants/cups.socket".
+Removed "/etc/systemd/system/multi-user.target.wants/cups.service".
+Removed "/etc/systemd/system/multi-user.target.wants/cups.path".
+Disabling 'cups.service', but its triggering units are still active:
+cups.path, cups.socket
++------------------+-----------+
+| User             | Host      |
++------------------+-----------+
+| debian-sys-maint | localhost |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
+| scibot           | localhost |
++------------------+-----------+
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease                         
+Ign:2 http://packages.linuxmint.com zena InRelease                             
+Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease               
+Hit:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease                 
+Hit:5 https://packages.mozilla.org/apt mozilla InRelease                       
+Hit:6 http://packages.linuxmint.com zena Release                               
+Hit:7 https://deb.nodesource.com/node_20.x nodistro InRelease                  
+Get:8 https://pkg.claude-desktop-debian.dev stable InRelease                   
+Hit:9 http://archive.ubuntu.com/ubuntu noble-backports InRelease               
+Hit:11 https://repo.protonvpn.com/debian stable InRelease                      
+Hit:13 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble InRelease  
+Hit:14 https://repository.mullvad.net/deb/stable stable InRelease              
+Hit:15 https://ppa.launchpadcontent.net/freecad-maintainers/freecad-stable/ubuntu noble InRelease
+Hit:16 https://ppa.launchpadcontent.net/kisak/kisak-mesa/ubuntu noble InRelease
+Hit:12 https://hub-dist.unity3d.com/artifactory/hub-debian-prod-local stable InRelease
+Hit:17 https://ppa.launchpadcontent.net/leapcodes/riseup-vpn/ubuntu noble InRelease
+Hit:18 https://ppa.launchpadcontent.net/ubuntuhandbook1/octave/ubuntu noble InRelease
+Hit:19 https://brave-browser-apt-release.s3.brave.com stable InRelease         
+Get:20 https://repo.librewolf.net librewolf InRelease [5,649 B]                
+Hit:21 https://repo.radeon.com/amdgpu/6.2.1/ubuntu jammy InRelease             
+Hit:22 http://packages.osrfoundation.org/gazebo/ubuntu-stable noble InRelease  
+Fetched 8,197 B in 11s (736 B/s)                                               
+Error: Timeout was reached
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://packages.mozilla.org/apt mozilla InRelease' doesn't support architecture 'i386'
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://brave-browser-apt-release.s3.brave.com stable InRelease' doesn't support architecture 'i386'
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  brave-browser
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 155 MB of archives.
+After this operation, 4,438 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y 
+Get:1 https://brave-browser-apt-release.s3.brave.com stable/main amd64 brave-browser amd64 1.99.55 [155 MB]
+Fetched 155 MB in 2min 23s (1,078 kB/s)                                        
+(Reading database… 1007029 files and directories currently installed.)
+Preparing to unpack …/brave-browser_1.99.55_amd64.deb…
+Unpacking brave-browser (1.99.55) over (1.98.63)…
+Setting up brave-browser (1.99.55)…
+Processing triggers for desktop-file-utils (0.27-2build1)…
+Processing triggers for gnome-menus (3.36.0-1.1ubuntu3)…
+Processing triggers for mate-menus (1.26.1+mint1)…
+Processing triggers for man-db (2.12.0-4build2)…
+Processing triggers for mailcap (3.70+nmu1ubuntu1.24.04.1)…
+Error: Timeout was reached
+astrid@astrid-B85-HD3-A:~$ sudo freshclam && clamscan -r --infected ~/Documents/
+ClamAV update process started at Thu Nov  5 16:34:47 2026
+Thu Nov  5 16:34:47 2026 -> daily database available for update (local version: 28141, remote version: 28174)
+Current database is 33 versions behind.
+Downloading database patch # 28142...
+Time:    0.3s, ETA:    0.0s [========================>]    1.62KiB/1.62KiB
+Time:    1.0s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28143...
+Time:    0.2s, ETA:    0.0s [========================>]       789B/789B
+Time:    1.0s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28144...
+Time:    0.2s, ETA:    0.0s [========================>]       784B/784B
+Time:    1.0s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28145...
+Time:    0.2s, ETA:    0.0s [========================>]    2.50KiB/2.50KiB
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28146...
+Time:    0.2s, ETA:    0.0s [========================>]    1.33KiB/1.33KiB
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28147...
+Time:    0.2s, ETA:    0.0s [========================>]    2.99KiB/2.99KiB
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28148...
+Time:    1.3s, ETA:    0.0s [========================>]       791B/791B
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28149...
+Time:    0.2s, ETA:    0.0s [========================>]    2.81KiB/2.81KiB
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28150...
+Time:    0.2s, ETA:    0.0s [========================>]       789B/789B
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28151...
+Time:    0.2s, ETA:    0.0s [========================>]       789B/789B
+Time:    0.6s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28152...
+Time:    0.2s, ETA:    0.0s [========================>]    1.25KiB/1.25KiB
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28153...
+Time:    0.2s, ETA:    0.0s [========================>]       997B/997B
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28154...
+Time:    0.2s, ETA:    0.0s [========================>]       785B/785B
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28155...
+Time:    0.2s, ETA:    0.0s [========================>]       787B/787B
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28156...
+Time:    0.2s, ETA:    0.0s [========================>]       789B/789B
+Time:    0.5s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28157...
+Time:    0.2s, ETA:    0.0s [========================>]       791B/791B
+Time:    0.5s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28158...
+Time:    0.2s, ETA:    0.0s [========================>]       789B/789B
+Time:    1.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28159...
+Time:    0.3s, ETA:    0.0s [========================>]    1.11KiB/1.11KiB
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28160...
+Time:    0.3s, ETA:    0.0s [========================>]    1.11KiB/1.11KiB
+Time:    0.5s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28161...
+Time:    0.2s, ETA:    0.0s [========================>]    2.22KiB/2.22KiB
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28162...
+Time:    0.2s, ETA:    0.0s [========================>]       789B/789B
+Time:    1.5s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28163...
+Time:    0.2s, ETA:    0.0s [========================>]    1.01KiB/1.01KiB
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28164...
+Time:    0.2s, ETA:    0.0s [========================>]       787B/787B
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28165...
+Time:    0.2s, ETA:    0.0s [========================>]       788B/788B
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28166...
+Time:    0.2s, ETA:    0.0s [========================>]    1.03KiB/1.03KiB
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28167...
+Time:    0.2s, ETA:    0.0s [========================>]    5.46KiB/5.46KiB
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28168...
+Time:    0.2s, ETA:    0.0s [========================>]    1.35KiB/1.35KiB
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28169...
+Time:    0.2s, ETA:    0.0s [========================>]    1.15KiB/1.15KiB
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28170...
+Time:    0.2s, ETA:    0.0s [========================>]       789B/789B
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28171...
+Time:    0.2s, ETA:    0.0s [========================>]       789B/789B
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28172...
+Time:    0.2s, ETA:    0.0s [========================>]       789B/789B
+Time:    0.5s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28173...
+Time:    0.2s, ETA:    0.0s [========================>]       789B/789B
+Time:    0.4s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Downloading database patch # 28174...
+Time:    0.4s, ETA:    0.0s [========================>]       789B/789B
+Time:    0.6s, ETA:    0.0s [========================>]    8.87KiB/8.87KiB
+Testing database: '/var/lib/clamav/tmp.cc142ee044/daily.cld' ...
+Database test passed.
+Thu Nov  5 16:35:22 2026 -> daily.cld updated (version: 28174, sigs: 355841, f-level: 90, builder: svc.clamav-publisher)
+Thu Nov  5 16:35:22 2026 -> main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+Thu Nov  5 16:35:22 2026 -> bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+WARNING: Clamd was NOT notified: The RELOAD command is disabled. Consider enabling it in the clamd configuration!
+

@@ -1,0 +1,2 @@
+math_visualization_tool.py: OK
+regenerate_skill_content.py: OK

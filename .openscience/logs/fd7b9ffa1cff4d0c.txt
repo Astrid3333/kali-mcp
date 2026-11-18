@@ -1,0 +1,50 @@
+test_tritos_codec.py:6 | blacklist | LOW | Standard pseudo-random generators are not suitable for security/crypto
+tritos_britannica.py:18 | blacklist | MEDIUM | Audit url open for permitted schemes. Allowing use of file:/ or custom
+tritos_britannica.py:48 | blacklist | MEDIUM | Audit url open for permitted schemes. Allowing use of file:/ or custom
+tritos_browser.py:28 | try_except_pass | LOW | Try, Except, Pass detected.
+tritos_codec.py:263 | blacklist | LOW | Standard pseudo-random generators are not suitable for security/crypto
+tritos_codec.py:342 | hardcoded_tmp_directory | MEDIUM | Probable insecure usage of temp file/directory.
+tritos_codec.py:343 | hardcoded_tmp_directory | MEDIUM | Probable insecure usage of temp file/directory.
+tritos_codec.py:344 | hardcoded_tmp_directory | MEDIUM | Probable insecure usage of temp file/directory.
+tritos_encyclopedia.py:25 | blacklist | MEDIUM | Audit url open for permitted schemes. Allowing use of file:/ or custom
+tritos_encyclopedia.py:46 | blacklist | MEDIUM | Audit url open for permitted schemes. Allowing use of file:/ or custom
+tritos_encyclopedia.py:72 | blacklist | MEDIUM | Audit url open for permitted schemes. Allowing use of file:/ or custom
+tritos_encyclopedia.py:85 | blacklist | MEDIUM | Audit url open for permitted schemes. Allowing use of file:/ or custom
+tritos_encyclopedia.py:107 | blacklist | MEDIUM | Audit url open for permitted schemes. Allowing use of file:/ or custom
+tritos_encyclopedia.py:130 | blacklist | MEDIUM | Audit url open for permitted schemes. Allowing use of file:/ or custom
+tritos_encyclopedia.py:150 | blacklist | MEDIUM | Audit url open for permitted schemes. Allowing use of file:/ or custom
+tritos_encyclopedia.py:171 | blacklist | MEDIUM | Audit url open for permitted schemes. Allowing use of file:/ or custom
+tritos_encyclopedia.py:191 | blacklist | MEDIUM | Audit url open for permitted schemes. Allowing use of file:/ or custom
+tritos_encyclopedia.py:212 | blacklist | MEDIUM | Audit url open for permitted schemes. Allowing use of file:/ or custom
+tritos_encyclopedia.py:232 | blacklist | MEDIUM | Audit url open for permitted schemes. Allowing use of file:/ or custom
+tritos_encyclopedia.py:277 | try_except_pass | LOW | Try, Except, Pass detected.
+tritos_gui.py:7 | blacklist | LOW | Consider possible security implications associated with the subprocess
+tritos_gui.py:643 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:731 | hardcoded_tmp_directory | MEDIUM | Probable insecure usage of temp file/directory.
+tritos_gui.py:771 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:941 | hardcoded_tmp_directory | MEDIUM | Probable insecure usage of temp file/directory.
+tritos_gui.py:972 | hardcoded_tmp_directory | MEDIUM | Probable insecure usage of temp file/directory.
+tritos_gui.py:1029 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:1246 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:1313 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:1383 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:1438 | subprocess_popen_with_shell_equals_true | HIGH | subprocess call with shell=True identified, security issue.
+tritos_gui.py:1517 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:1649 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:1739 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:1750 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:1797 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:1864 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:1959 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:2096 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:2115 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:2132 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:2290 | try_except_pass | LOW | Try, Except, Pass detected.
+tritos_gui.py:2368 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:2391 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:2516 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:2536 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:2549 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:2780 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:2795 | subprocess_without_shell_equals_true | LOW | subprocess call - check for execution of untrusted input.
+tritos_gui.py:2809 | start_process_with_partial_path | LOW | Starting a process with a partial executable path

@@ -1,0 +1,1 @@
+  src/structuresynth_mcp/examples_meta.py:9 | python.lang.compatibility.python37.python37-compatibility-importlib2

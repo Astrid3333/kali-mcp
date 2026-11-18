@@ -1,0 +1,2 @@
+jobs.py: OK
+verificar_mcp.py: OK

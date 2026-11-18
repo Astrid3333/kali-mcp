@@ -1,0 +1,5 @@
+Help on function main in module mcp_server:
+
+main()
+    Main entry point for the MCP server.
+

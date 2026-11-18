@@ -1,0 +1,40 @@
+astrid@astrid-B85-HD3-A:~$  Ver qué servicios están corriendo
+sudo systemctl list-units --type=service --state=running
+
+# Desactivar CUPS si no usas impresora
+sudo systemctl disable cups
+sudo systemctl stop cups
+
+# Verificar usuarios de MySQL
+sudo mysql -u root -e "SELECT User, Host FROM mysql.user;"
+
+# Mantener el sistema actualizado
+sudo apt update && sudo apt upgrade
+Command 'Ver' not found, did you mean:
+  command 'ner' from deb frog (0.20-2build5)
+Try: sudo apt install <deb name>
+[sudo] password for astrid:     
+  UNIT                                  LOAD   ACTIVE SUB     DESCRIPTION      >
+  accounts-daemon.service               loaded active running Accounts Service
+  avahi-daemon.service                  loaded active running Avahi mDNS/DNS-SD>
+  bluetooth.service                     loaded active running Bluetooth service
+  clamav-daemon.service                 loaded active running Clam AntiVirus us>
+  colord.service                        loaded active running Manage, Install a>
+  containerd.service                    loaded active running containerd contai>
+  cron.service                          loaded active running Regular backgroun>
+  cups-browsed.service                  loaded active running Make remote CUPS >
+  cups.service                          loaded active running CUPS Scheduler
+  dbus.service                          loaded active running D-Bus System Mess>
+  docker.service                        loaded active running Docker Applicatio>
+  fwupd.service                         loaded active running Firmware update d>
+  getty@tty1.service                    loaded active running Getty on tty1
+  irqbalance.service                    loaded active running irqbalance daemon
+  kerneloops.service                    loaded active running Tool to automatic>
+  lightdm.service                       loaded active running Light Display Man>
+  me.proton.vpn.split_tunneling.service loaded active running Proton VPN Daemon
+  ModemManager.service                  loaded active running Modem Manager
+  mullvad-daemon.service                loaded active running Mullvad VPN daemon
+  mysql.service                         loaded active running MySQL Community S>
+  networkd-dispatcher.service           loaded active running Dispatcher daemon>
+  NetworkManager.service                loaded active running Network Manager
+lines 1-23

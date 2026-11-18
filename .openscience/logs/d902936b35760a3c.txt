@@ -1,0 +1,11 @@
+2026-11-18 03:17:22,693 [INFO] Starting Kali Linux Tools API Server on 127.0.0.1:5001
+ * Serving Flask app 'server'
+ * Debug mode: off
+2026-11-18 03:17:22,697 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2026-11-18 03:17:22,697 [INFO] [33mPress CTRL+C to quit[0m
+
+
+<shell_metadata>
+shell tool terminated command after exceeding timeout 120000 ms. If this command is expected to take longer and is not waiting for interactive input, retry with a larger timeout value in milliseconds.
+</shell_metadata>

@@ -1,0 +1,35 @@
+============================================================
+🧪 PRUEBA 1: Health check del servidor MCP
+============================================================
+✅ Contenedor Kali MCP operativo
+Comando de prueba: nmap --version | head -1
+Salida: Nmap version 7.991 ( https://nmap.org )
+Platform: x86_64-pc-linux-gnu
+Compiled with: liblua-5.4.9 openssl-3.6.5 libssh2-1.11.1 libz-1.3.2 libpcre2-10.48 libpcap-1.11.0 nmap-libdnet-1.18.0 ipv6
+Compiled without:
+Available nsock engines: epoll poll select
+
+
+============================================================
+🧪 PRUEBA 2: Nmap contra tu host (172.20.10.8)
+============================================================
+🔧 Herramienta: kali_nmap
+📋 Comando ejecutado: nmap -sV -p 631,3306,4098,5000,11434 172.20.10.8
+📊 Código de salida: 0
+
+📤 Salida:
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-05 21:29 +0000
+Nmap scan report for 172.20.10.8
+Host is up (0.00011s latency).
+
+PORT      STATE  SERVICE VERSION
+631/tcp   closed ipp
+3306/tcp  closed mysql
+4098/tcp  closed drmsfsd
+5000/tcp  closed upnp
+11434/tcp closed ollama
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 10.22 seconds
+
+

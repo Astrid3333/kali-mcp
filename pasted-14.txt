@@ -1,0 +1,408 @@
+bde185c292a9
+  Stored in directory: /tmp/pip-ephem-wheel-cache-uxmn01ba/wheels/5c/10/cc/76ed1c014355a9e16655550905ffbba33d2ff3f767962edf63
+Successfully built impacket
+Installing collected packages: typing-extensions, six, pycryptodomex, pycparser, pyasn1, markupsafe, itsdangerous, dnspython, click, charset_normalizer, blinker, werkzeug, pyasn1_modules, ldap3, jinja2, cffi, ldapdomaindump, flask, cryptography, pyOpenSSL, impacket
+Successfully installed blinker-1.9.0 cffi-2.1.1 charset_normalizer-3.5.2 click-8.5.1 cryptography-50.0.2 dnspython-2.9.2 flask-3.1.3 impacket-0.14.0.dev0+20261118.12900.0957bf26 itsdangerous-2.2.0 jinja2-3.1.6 ldap3-2.9.1 ldapdomaindump-0.10.0 markupsafe-3.0.4 pyOpenSSL-26.4.0 pyasn1-0.6.5 pyasn1_modules-0.4.2 pycparser-3.12 pycryptodomex-3.24.2 six-1.17.0 typing-extensions-4.16.0 werkzeug-3.1.9
+(venv_cme) astrid@astrid-B85-HD3-A:/opt/security_tools/impacket$ # Probar SMB contra localhost
+cme smb 127.0.0.1 -u admin -p ""
+
+# Probar LDAP
+cme ldap 127.0.0.1 -u admin -p ""
+Command 'cme' not found, but can be installed with:
+sudo apt install cme
+Command 'cme' not found, but can be installed with:
+sudo apt install cme
+(venv_cme) astrid@astrid-B85-HD3-A:/opt/security_tools/impacket$ # Probar SMB contra localhost
+cme smb 127.0.0.1 -u admin -p ""
+Command 'cme' not found, but can be installed with:
+sudo apt install cme
+(venv_cme) astrid@astrid-B85-HD3-A:/opt/security_tools/impacket$ # 1. Asegurar directorio de trabajo
+cd /opt/security_tools
+
+# 2. Clonar repositorio CME (diferente a impacket)
+git clone https://github.com/byt3bl33d3r/CrackMapExec.git
+cd CrackMapExec
+
+# 3. Instalar en el venv existente
+source /opt/security_tools/venv_cme/bin/activate
+pip install -e .
+
+# 4. Verificar instalación
+which cme && cme --help 2>&1 | head -5
+Cloning into 'CrackMapExec'...
+remote: Enumerating objects: 13471, done.
+Receiving objects:   6% (809/13471), 212.01 KiB | 390.00 KiB/Receiving objects:   7% (943/13471), 212.01 KiB | 390.00 KiB/Receiving objects:   8% (1078/13471), 212.01 KiB | 390.00 KiBReceiving objects:   9% (1213/13471), 212.01 KiB | 390.00 KiBReceiving objects:  10% (1348/13471), 212.01 KiB | 390.00 KiBReceiving objects:  11% (1482/13471), 212.01 KiB | 390.00 KiBReceiving objects:  12% (1617/13471), 212.01 KiB | 390.00 KiBReceiving objects:  13% (1752/13471), 212.01 KiB | 390.00 KiBReceiving objects:  14% (1886/13471), 212.01 KiB | 390.00 KiBReceiving objects:  14% (1915/13471), 212.01 KiB | 390.00 KiBReceiving objects:  15% (2021/13471), 524.01 KiB | 497.00 KiBReceiving objects:  16% (2156/13471), 524.01 KiB | 497.00 KiBReceiving objects:  17% (2291/13471), 524.01 KiB | 497.00 KiBReceiving objects:  18% (2425/13471), 524.01 KiB | 497.00 KiBReceiving objects:  18% (2558/13471), 1.26 MiB | 617.00 KiB/sReceiving objects:  31% (4265/13471), 5.38 MiB | 1011.00 KiB/Receiving objects:  32% (4311/13471), 5.38 MiB | 1011.00 KiB/Receiving objects:  33% (4446/13471), 5.38 MiB | 1011.00 KiB/Receiving objects:  34% (4581/13471), 5.38 MiB | 1011.00 KiB/Receiving objects:  35% (4715/13471), 5.38 MiB | 1011.00 KiB/Receiving objects:  36% (4850/13471), 5.38 MiB | 1011.00 KiB/Receiving objects:  37% (4985/13471), 5.38 MiB | 1011.00 KiB/Receiving objects:  38% (5119/13471), 5.38 MiB | 1011.00 KiB/Receiving objects:  39% (5254/13471), 6.02 MiB | 1.04 MiB/s  remote: Total 13471 (delta 0), reused 0 (delta 0), pack-reused 13471 (from 1)
+Receiving objects: 100% (13471/13471), 10.34 MiB | 1.04 MiB/s, done.
+Resolving deltas: 100% (10097/10097), done.
+Obtaining file:///opt/security_tools/CrackMapExec
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+Collecting impacket@ git+https://github.com/mpgn/impacket.git@gkdi (from crackmapexec==6.1.0)
+  Cloning https://github.com/mpgn/impacket.git (to revision gkdi) to /tmp/pip-install-3fx11l6z/impacket_313d38a7ec4f4e9990958bd11f7d7f65
+  Running command git clone --filter=blob:none --quiet https://github.com/mpgn/impacket.git /tmp/pip-install-3fx11l6z/impacket_313d38a7ec4f4e9990958bd11f7d7f65
+  Running command git checkout -b gkdi --track origin/gkdi
+  Switched to a new branch 'gkdi'
+  branch 'gkdi' set up to track 'origin/gkdi'.
+  Resolved https://github.com/mpgn/impacket.git to commit 3beeda7c3188936ed20f58c2c169430c2cfdfb1a
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting oscrypto@ git+https://github.com/NeffIsBack/oscrypto (from crackmapexec==6.1.0)
+  Cloning https://github.com/NeffIsBack/oscrypto to /tmp/pip-install-3fx11l6z/oscrypto_47452456325c487187bd49a9857e85c0
+  Running command git clone --filter=blob:none --quiet https://github.com/NeffIsBack/oscrypto /tmp/pip-install-3fx11l6z/oscrypto_47452456325c487187bd49a9857e85c0
+  Resolved https://github.com/NeffIsBack/oscrypto to commit d5f3437ed24257895ae1edd9e503cfb352e635a8
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting aardwolf<0.3.0,>=0.2.7 (from crackmapexec==6.1.0)
+  Downloading aardwolf-0.2.17-cp311-abi3-manylinux_2_28_x86_64.whl.metadata (4.3 kB)
+Collecting aioconsole<0.4.0,>=0.3.3 (from crackmapexec==6.1.0)
+  Downloading aioconsole-0.3.3.tar.gz (27 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting aiosqlite<0.19.0,>=0.18.0 (from crackmapexec==6.1.0)
+  Downloading aiosqlite-0.18.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting asyauth<0.1.0,>=0.0.13 (from crackmapexec==6.1.0)
+  Downloading asyauth-0.0.25-py3-none-any.whl.metadata (557 bytes)
+Collecting beautifulsoup4<5,>=4.11 (from crackmapexec==6.1.0)
+  Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting bloodhound<2.0.0,>=1.6.1 (from crackmapexec==6.1.0)
+  Downloading bloodhound-1.9.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting dploot<3.0.0,>=2.2.1 (from crackmapexec==6.1.0)
+  Downloading dploot-2.7.4-py3-none-any.whl.metadata (32 kB)
+Collecting dsinternals<2.0.0,>=1.2.4 (from crackmapexec==6.1.0)
+  Downloading dsinternals-1.2.5-py3-none-any.whl.metadata (2.0 kB)
+Collecting lsassy>=3.1.8 (from crackmapexec==6.1.0)
+  Downloading lsassy-3.1.16-py3-none-any.whl.metadata (19 kB)
+Collecting masky<0.3.0,>=0.2.0 (from crackmapexec==6.1.0)
+  Downloading masky-0.2.1-py3-none-any.whl.metadata (9.4 kB)
+Collecting minikerberos<0.5.0,>=0.4.0 (from crackmapexec==6.1.0)
+  Downloading minikerberos-0.4.12-py3-none-any.whl.metadata (940 bytes)
+Collecting msgpack<2.0.0,>=1.0.0 (from crackmapexec==6.1.0)
+  Downloading msgpack-1.2.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Collecting neo4j<5.0.0,>=4.1.1 (from crackmapexec==6.1.0)
+  Downloading neo4j-4.4.13.tar.gz (89 kB)
+     ━━━━━━━━━━━━━━━━━━━━ 89.3/89.3 kB 619.6 kB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting paramiko<3.0.0,>=2.7.2 (from crackmapexec==6.1.0)
+  Downloading paramiko-2.12.0-py2.py3-none-any.whl.metadata (4.6 kB)
+Collecting pyasn1-modules<0.4.0,>=0.3.0 (from crackmapexec==6.1.0)
+  Downloading pyasn1_modules-0.3.0-py2.py3-none-any.whl.metadata (3.6 kB)
+Collecting pylnk3<0.5.0,>=0.4.2 (from crackmapexec==6.1.0)
+  Downloading pylnk3-0.4.3-py3-none-any.whl.metadata (4.3 kB)
+Collecting pypsrp<0.8.0,>=0.7.0 (from crackmapexec==6.1.0)
+  Downloading pypsrp-0.7.0-py3-none-any.whl.metadata (22 kB)
+Collecting pypykatz<0.7.0,>=0.6.8 (from crackmapexec==6.1.0)
+  Downloading pypykatz-0.6.13-py3-none-any.whl.metadata (751 bytes)
+Collecting python-libnmap<0.8.0,>=0.7.3 (from crackmapexec==6.1.0)
+  Downloading python-libnmap-0.7.3.tar.gz (39 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting pywerview<0.4.0,>=0.3.3 (from crackmapexec==6.1.0)
+  Downloading pywerview-0.3.3-py3-none-any.whl.metadata (11 kB)
+Collecting requests>=2.27.1 (from crackmapexec==6.1.0)
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting resource<0.3.0,>=0.2.1 (from crackmapexec==6.1.0)
+  Downloading Resource-0.2.1-py2.py3-none-any.whl.metadata (478 bytes)
+Collecting rich<14.0.0,>=13.3.5 (from crackmapexec==6.1.0)
+  Downloading rich-13.9.4-py3-none-any.whl.metadata (18 kB)
+Collecting sqlalchemy<3.0.0,>=2.0.4 (from crackmapexec==6.1.0)
+  Downloading sqlalchemy-2.1.9-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+Collecting termcolor<2.0.0,>=1.1.0 (from crackmapexec==6.1.0)
+  Downloading termcolor-1.1.0.tar.gz (3.9 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting terminaltables<4.0.0,>=3.1.0 (from crackmapexec==6.1.0)
+  Downloading terminaltables-3.1.10-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting xmltodict<0.13.0,>=0.12.0 (from crackmapexec==6.1.0)
+  Downloading xmltodict-0.12.0-py2.py3-none-any.whl.metadata (6.3 kB)
+Collecting unicrypto>=0.0.11 (from aardwolf<0.3.0,>=0.2.7->crackmapexec==6.1.0)
+  Downloading unicrypto-0.0.12-py3-none-any.whl.metadata (386 bytes)
+Collecting asysocks>=0.2.11 (from aardwolf<0.3.0,>=0.2.7->crackmapexec==6.1.0)
+  Downloading asysocks-0.2.19-py3-none-any.whl.metadata (433 bytes)
+Collecting tqdm (from aardwolf<0.3.0,>=0.2.7->crackmapexec==6.1.0)
+  Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━ 57.4/57.4 kB 287.9 kB/s eta 0:00:00
+Collecting colorama (from aardwolf<0.3.0,>=0.2.7->crackmapexec==6.1.0)
+  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting asn1crypto (from aardwolf<0.3.0,>=0.2.7->crackmapexec==6.1.0)
+  Downloading asn1crypto-1.5.1-py2.py3-none-any.whl.metadata (13 kB)
+Collecting asn1tools (from aardwolf<0.3.0,>=0.2.7->crackmapexec==6.1.0)
+  Downloading asn1tools-0.169.0-py3-none-any.whl.metadata (13 kB)
+Collecting pyperclip>=1.8.2 (from aardwolf<0.3.0,>=0.2.7->crackmapexec==6.1.0)
+  Downloading pyperclip-1.11.0-py3-none-any.whl.metadata (2.4 kB)
+Collecting arc4>=0.3.0 (from aardwolf<0.3.0,>=0.2.7->crackmapexec==6.1.0)
+  Downloading arc4-0.5.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.2 kB)
+Collecting Pillow>=9.0.0 (from aardwolf<0.3.0,>=0.2.7->crackmapexec==6.1.0)
+  Using cached pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting soupsieve>=1.6.1 (from beautifulsoup4<5,>=4.11->crackmapexec==6.1.0)
+  Downloading soupsieve-4.1.1-py3-none-any.whl.metadata (4.4 kB)
+Requirement already satisfied: typing-extensions>=4.0.0 in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from beautifulsoup4<5,>=4.11->crackmapexec==6.1.0) (4.16.0)
+Requirement already satisfied: dnspython in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from bloodhound<2.0.0,>=1.6.1->crackmapexec==6.1.0) (2.9.2)
+Requirement already satisfied: ldap3!=2.5.0,!=2.5.2,!=2.6,>=2.5 in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from bloodhound<2.0.0,>=1.6.1->crackmapexec==6.1.0) (2.9.1)
+Requirement already satisfied: pyasn1>=0.4 in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from bloodhound<2.0.0,>=1.6.1->crackmapexec==6.1.0) (0.6.5)
+Collecting pycryptodome (from bloodhound<2.0.0,>=1.6.1->crackmapexec==6.1.0)
+  Downloading pycryptodome-4.5.0-cp39-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.8 kB)
+Requirement already satisfied: cryptography>=40.0.1 in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from dploot<3.0.0,>=2.2.1->crackmapexec==6.1.0) (50.0.2)
+Collecting lxml==4.9.3 (from dploot<3.0.0,>=2.2.1->crackmapexec==6.1.0)
+  Downloading lxml-4.9.3-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Collecting pyasn1>=0.4 (from bloodhound<2.0.0,>=1.6.1->crackmapexec==6.1.0)
+  Downloading pyasn1-0.4.8-py2.py3-none-any.whl.metadata (1.5 kB)
+Requirement already satisfied: pyopenssl in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from dsinternals<2.0.0,>=1.2.4->crackmapexec==6.1.0) (26.4.0)
+Requirement already satisfied: pycryptodomex in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from dsinternals<2.0.0,>=1.2.4->crackmapexec==6.1.0) (3.24.2)
+Requirement already satisfied: six in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from impacket@ git+https://github.com/mpgn/impacket.git@gkdi->crackmapexec==6.1.0) (1.17.0)
+Requirement already satisfied: ldapdomaindump>=0.9.0 in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from impacket@ git+https://github.com/mpgn/impacket.git@gkdi->crackmapexec==6.1.0) (0.10.0)
+Requirement already satisfied: flask>=1.0 in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from impacket@ git+https://github.com/mpgn/impacket.git@gkdi->crackmapexec==6.1.0) (3.1.3)
+Collecting future (from impacket@ git+https://github.com/mpgn/impacket.git@gkdi->crackmapexec==6.1.0)
+  Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+Requirement already satisfied: charset_normalizer in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from impacket@ git+https://github.com/mpgn/impacket.git@gkdi->crackmapexec==6.1.0) (3.5.2)
+Collecting netaddr>=1.3.0 (from lsassy>=3.1.8->crackmapexec==6.1.0)
+  Downloading netaddr-1.3.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting pytz (from neo4j<5.0.0,>=4.1.1->crackmapexec==6.1.0)
+  Downloading pytz-2026.6-py2.py3-none-any.whl.metadata (22 kB)
+Collecting bcrypt>=3.1.3 (from paramiko<3.0.0,>=2.7.2->crackmapexec==6.1.0)
+  Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl.metadata (10 kB)
+Collecting pynacl>=1.0.1 (from paramiko<3.0.0,>=2.7.2->crackmapexec==6.1.0)
+  Downloading pynacl-1.6.2-cp38-abi3-manylinux_2_34_x86_64.whl.metadata (10.0 kB)
+Collecting pyspnego<1.0.0 (from pypsrp<0.8.0,>=0.7.0->crackmapexec==6.1.0)
+  Downloading pyspnego-0.12.4-py3-none-any.whl.metadata (4.2 kB)
+Collecting minidump<=0.1.0,>=0.0.21 (from pypykatz<0.7.0,>=0.6.8->crackmapexec==6.1.0)
+  Downloading minidump-0.0.24-py3-none-any.whl.metadata (467 bytes)
+Collecting aiowinreg<=0.1.0,>=0.0.11 (from pypykatz<0.7.0,>=0.6.8->crackmapexec==6.1.0)
+  Downloading aiowinreg-0.0.13-py3-none-any.whl.metadata (620 bytes)
+Collecting msldap<=0.6.0,>=0.5.7 (from pypykatz<0.7.0,>=0.6.8->crackmapexec==6.1.0)
+  Downloading msldap-0.5.15-py3-none-any.whl.metadata (758 bytes)
+Collecting winacl<=0.2.0,>=0.1.9 (from pypykatz<0.7.0,>=0.6.8->crackmapexec==6.1.0)
+  Downloading winacl-0.1.9-py3-none-any.whl.metadata (458 bytes)
+Collecting aiosmb<=0.5.0,>=0.4.8 (from pypykatz<0.7.0,>=0.6.8->crackmapexec==6.1.0)
+  Downloading aiosmb-0.4.14-py3-none-any.whl.metadata (712 bytes)
+Collecting aesedb<=0.2.0,>=0.1.4 (from pypykatz<0.7.0,>=0.6.8->crackmapexec==6.1.0)
+  Downloading aesedb-0.1.8-py3-none-any.whl.metadata (660 bytes)
+Collecting bs4 (from pywerview<0.4.0,>=0.3.3->crackmapexec==6.1.0)
+  Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+Collecting idna<4,>=2.5 (from requests>=2.27.1->crackmapexec==6.1.0)
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting urllib3<3,>=1.26 (from requests>=2.27.1->crackmapexec==6.1.0)
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting certifi>=2023.5.7 (from requests>=2.27.1->crackmapexec==6.1.0)
+  Using cached certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Collecting JsonForm>=0.0.2 (from resource<0.3.0,>=0.2.1->crackmapexec==6.1.0)
+  Downloading JsonForm-0.0.2.tar.gz (2.4 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting JsonSir>=0.0.2 (from resource<0.3.0,>=0.2.1->crackmapexec==6.1.0)
+  Downloading JsonSir-0.0.2.tar.gz (2.2 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting python-easyconfig>=0.1.0 (from resource<0.3.0,>=0.2.1->crackmapexec==6.1.0)
+  Downloading Python_EasyConfig-0.1.7-py2.py3-none-any.whl.metadata (462 bytes)
+Collecting markdown-it-py>=2.2.0 (from rich<14.0.0,>=13.3.5->crackmapexec==6.1.0)
+  Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich<14.0.0,>=13.3.5->crackmapexec==6.1.0)
+  Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting prompt-toolkit>=3.0.2 (from aiosmb<=0.5.0,>=0.4.8->pypykatz<0.7.0,>=0.6.8->crackmapexec==6.1.0)
+  Downloading prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+Collecting wcwidth (from aiosmb<=0.5.0,>=0.4.8->pypykatz<0.7.0,>=0.6.8->crackmapexec==6.1.0)
+  Downloading wcwidth-0.9.4-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (23 kB)
+Collecting h11>=0.14.0 (from asysocks>=0.2.11->aardwolf<0.3.0,>=0.2.7->crackmapexec==6.1.0)
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Requirement already satisfied: cffi>=2.0.0 in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from cryptography>=40.0.1->dploot<3.0.0,>=2.2.1->crackmapexec==6.1.0) (2.1.1)
+Requirement already satisfied: blinker>=1.9.0 in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from flask>=1.0->impacket@ git+https://github.com/mpgn/impacket.git@gkdi->crackmapexec==6.1.0) (1.9.0)
+Requirement already satisfied: click>=8.1.3 in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from flask>=1.0->impacket@ git+https://github.com/mpgn/impacket.git@gkdi->crackmapexec==6.1.0) (8.5.1)
+Requirement already satisfied: itsdangerous>=2.2.0 in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from flask>=1.0->impacket@ git+https://github.com/mpgn/impacket.git@gkdi->crackmapexec==6.1.0) (2.2.0)
+Requirement already satisfied: jinja2>=3.1.2 in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from flask>=1.0->impacket@ git+https://github.com/mpgn/impacket.git@gkdi->crackmapexec==6.1.0) (3.1.6)
+Requirement already satisfied: markupsafe>=2.1.1 in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from flask>=1.0->impacket@ git+https://github.com/mpgn/impacket.git@gkdi->crackmapexec==6.1.0) (3.0.4)
+Requirement already satisfied: werkzeug>=3.1.0 in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from flask>=1.0->impacket@ git+https://github.com/mpgn/impacket.git@gkdi->crackmapexec==6.1.0) (3.1.9)
+Collecting jsonschema (from JsonForm>=0.0.2->resource<0.3.0,>=0.2.1->crackmapexec==6.1.0)
+  Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<14.0.0,>=13.3.5->crackmapexec==6.1.0)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting tabulate (from msldap<=0.6.0,>=0.5.7->pypykatz<0.7.0,>=0.6.8->crackmapexec==6.1.0)
+  Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 335.4 kB/s eta 0:00:00
+Collecting PyYAML (from python-easyconfig>=0.1.0->resource<0.3.0,>=0.2.1->crackmapexec==6.1.0)
+  Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting pyparsing>=3.1.2 (from asn1tools->aardwolf<0.3.0,>=0.2.7->crackmapexec==6.1.0)
+  Using cached pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting bitstruct (from asn1tools->aardwolf<0.3.0,>=0.2.7->crackmapexec==6.1.0)
+  Downloading bitstruct-8.24.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (7.3 kB)
+Requirement already satisfied: pycparser in /opt/security_tools/venv_cme/lib/python3.12/site-packages (from cffi>=2.0.0->cryptography>=40.0.1->dploot<3.0.0,>=2.2.1->crackmapexec==6.1.0) (3.12)
+Collecting attrs>=22.2.0 (from jsonschema->JsonForm>=0.0.2->resource<0.3.0,>=0.2.1->crackmapexec==6.1.0)
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema->JsonForm>=0.0.2->resource<0.3.0,>=0.2.1->crackmapexec==6.1.0)
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema->JsonForm>=0.0.2->resource<0.3.0,>=0.2.1->crackmapexec==6.1.0)
+  Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema->JsonForm>=0.0.2->resource<0.3.0,>=0.2.1->crackmapexec==6.1.0)
+  Using cached rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Downloading aardwolf-0.2.17-cp311-abi3-manylinux_2_28_x86_64.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 1.6 MB/s eta 0:00:00
+Downloading aiosqlite-0.18.0-py3-none-any.whl (15 kB)
+Downloading asyauth-0.0.25-py3-none-any.whl (121 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 121.3/121.3 kB 1.1 MB/s eta 0:00:00
+Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+   ━━━━━━━━━━━━━━━━━━━━ 109.9/109.9 kB 992.8 kB/s eta 0:00:00
+Downloading bloodhound-1.9.0-py3-none-any.whl (84 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 84.9/84.9 kB 767.6 kB/s eta 0:00:00
+Downloading dploot-2.7.4-py3-none-any.whl (70 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 70.7/70.7 kB 607.9 kB/s eta 0:00:00
+Downloading lxml-4.9.3-cp312-cp312-manylinux_2_28_x86_64.whl (8.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 2.5 MB/s eta 0:00:00
+Downloading dsinternals-1.2.5-py3-none-any.whl (200 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 200.4/200.4 kB 1.3 MB/s eta 0:00:00
+Downloading lsassy-3.1.16-py3-none-any.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 3.1 MB/s eta 0:00:00
+Downloading masky-0.2.1-py3-none-any.whl (285 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 285.2/285.2 kB 1.8 MB/s eta 0:00:00
+Downloading minikerberos-0.4.12-py3-none-any.whl (165 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 165.0/165.0 kB 1.2 MB/s eta 0:00:00
+Downloading msgpack-1.2.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (475 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 475.7/475.7 kB 2.5 MB/s eta 0:00:00
+Downloading paramiko-2.12.0-py2.py3-none-any.whl (213 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 213.1/213.1 kB 1.3 MB/s eta 0:00:00
+Downloading pyasn1_modules-0.3.0-py2.py3-none-any.whl (181 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 kB 1.6 MB/s eta 0:00:00
+Downloading pylnk3-0.4.3-py3-none-any.whl (21 kB)
+Downloading pypsrp-0.7.0-py3-none-any.whl (85 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 85.7/85.7 kB 881.4 kB/s eta 0:00:00
+Downloading pypykatz-0.6.13-py3-none-any.whl (402 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 403.0/403.0 kB 2.4 MB/s eta 0:00:00
+Downloading pywerview-0.3.3-py3-none-any.whl (56 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 56.4/56.4 kB 460.7 kB/s eta 0:00:00
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 711.2 kB/s eta 0:00:00
+Downloading Resource-0.2.1-py2.py3-none-any.whl (25 kB)
+Downloading rich-13.9.4-py3-none-any.whl (242 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 242.4/242.4 kB 1.8 MB/s eta 0:00:00
+Downloading sqlalchemy-2.1.9-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 2.5 MB/s eta 0:00:00
+Downloading terminaltables-3.1.10-py2.py3-none-any.whl (15 kB)
+Downloading xmltodict-0.12.0-py2.py3-none-any.whl (9.2 kB)
+Downloading aesedb-0.1.8-py3-none-any.whl (41 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 41.4/41.4 kB 363.1 kB/s eta 0:00:00
+Downloading aiosmb-0.4.14-py3-none-any.whl (717 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 717.6/717.6 kB 2.1 MB/s eta 0:00:00
+Downloading aiowinreg-0.0.13-py3-none-any.whl (27 kB)
+Downloading arc4-0.5.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (17 kB)
+Downloading asn1crypto-1.5.1-py2.py3-none-any.whl (105 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 105.0/105.0 kB 1.0 MB/s eta 0:00:00
+Downloading asysocks-0.2.19-py3-none-any.whl (160 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 160.2/160.2 kB 1.2 MB/s eta 0:00:00
+Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (278 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 278.2/278.2 kB 1.2 MB/s eta 0:00:00
+Using cached certifi-2026.10.23-py3-none-any.whl (135 kB)
+Using cached idna-3.20-py3-none-any.whl (69 kB)
+Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 97.0/97.0 kB 786.1 kB/s eta 0:00:00
+Downloading minidump-0.0.24-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 666.4 kB/s eta 0:00:00
+Downloading msldap-0.5.15-py3-none-any.whl (165 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 165.1/165.1 kB 1.3 MB/s eta 0:00:00
+Downloading netaddr-1.3.0-py3-none-any.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 2.8 MB/s eta 0:00:00
+Using cached pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+Downloading pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 77.1/77.1 kB 691.2 kB/s eta 0:00:00
+Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Downloading pynacl-1.6.2-cp38-abi3-manylinux_2_34_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 1.7 MB/s eta 0:00:00
+Downloading pyperclip-1.11.0-py3-none-any.whl (11 kB)
+Downloading pyspnego-0.12.4-py3-none-any.whl (131 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 131.0/131.0 kB 1.1 MB/s eta 0:00:00
+Downloading Python_EasyConfig-0.1.7-py2.py3-none-any.whl (5.4 kB)
+Downloading soupsieve-4.1.1-py3-none-any.whl (55 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 55.1/55.1 kB 491.8 kB/s eta 0:00:00
+Downloading unicrypto-0.0.12-py3-none-any.whl (75 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 75.5/75.5 kB 832.1 kB/s eta 0:00:00
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+   ━━━━━━━━━━━━━━━━━━━━ 135.7/135.7 kB 914.6 kB/s eta 0:00:00
+Downloading winacl-0.1.9-py3-none-any.whl (89 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 89.2/89.2 kB 824.4 kB/s eta 0:00:00
+Downloading asn1tools-0.169.0-py3-none-any.whl (119 kB)
+   ━━━━━━━━━━━━━━━━━━━━ 119.8/119.8 kB 894.8 kB/s eta 0:00:00
+Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading future-1.0.0-py3-none-any.whl (491 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 2.0 MB/s eta 0:00:00
+Downloading pycryptodome-4.5.0-cp39-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 3.4 MB/s eta 0:00:00
+Downloading pytz-2026.6-py2.py3-none-any.whl (506 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 506.3/506.3 kB 2.6 MB/s eta 0:00:00
+Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 698.4 kB/s eta 0:00:00
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 392.3/392.3 kB 2.1 MB/s eta 0:00:00
+Using cached pyparsing-3.3.3-py3-none-any.whl (126 kB)
+Downloading wcwidth-0.9.4-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (785 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 785.9/785.9 kB 2.5 MB/s eta 0:00:00
+Downloading bitstruct-8.24.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (82 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 82.1/82.1 kB 774.0 kB/s eta 0:00:00
+Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 2.8 MB/s eta 0:00:00
+Downloading tabulate-0.10.0-py3-none-any.whl (39 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+Using cached rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+Building wheels for collected packages: crackmapexec, aioconsole, impacket, neo4j, oscrypto, python-libnmap, termcolor, JsonForm, JsonSir
+  Building editable for crackmapexec (pyproject.toml) ... done
+  Created wheel for crackmapexec: filename=crackmapexec-6.1.0-py3-none-any.whl size=3704 sha256=f386666843d2890132ca7a430a835a28c1f5d55d8e53204c2d1f72180ab6cc1c
+  Stored in directory: /tmp/pip-ephem-wheel-cache-zf5egd05/wheels/cb/ec/71/46f258536251a0dfb93600e628526ff0f0d7cc6e9599826c13
+  Building wheel for aioconsole (pyproject.toml) ... done
+  Created wheel for aioconsole: filename=aioconsole-0.3.3-py3-none-any.whl size=29079 sha256=e1ada7586ab6b6358953c8f10acfe931d37f3bc992bc337657991b6a5dd75583
+  Stored in directory: /home/astrid/.cache/pip/wheels/ea/10/09/160d924ee74a14ffb37920f99f8838a1b4cc858098f3836312
+  Building wheel for impacket (pyproject.toml) ... done
+  Created wheel for impacket: filename=impacket-0.12.0.dev1+20230909.154612.3beeda7c-py3-none-any.whl size=1529026 sha256=f5b8f63be2b2f80a3c680b5a327f678e2728fd28855b7991b9dd7bf9cba6aa45
+  Stored in directory: /tmp/pip-ephem-wheel-cache-zf5egd05/wheels/60/e4/9e/26d917b970ad6872c6e93e20d1c9dad4bcb8b4788cfcaa7e8b
+  Building wheel for neo4j (pyproject.toml) ... done
+  Created wheel for neo4j: filename=neo4j-4.4.13-py3-none-any.whl size=113782 sha256=a609d0d27b2704f44b2686c0b6b5a191fe36fae116cb752773daee3dd9a6f345
+  Stored in directory: /home/astrid/.cache/pip/wheels/c6/97/8d/fd7171017b2ab7d66392cec0281ad0fa5b892e7c6a35189891
+  Building wheel for oscrypto (pyproject.toml) ... done
+  Created wheel for oscrypto: filename=oscrypto-1.3.0-py3-none-any.whl size=195298 sha256=f3ab04842751da32dad1c2177dcf7481df4b9cf07fa9a68683ef7b340f347350
+  Stored in directory: /tmp/pip-ephem-wheel-cache-zf5egd05/wheels/eb/f3/49/046fc4d1dcaf67aeb835c94d5a30b382e7152e6f5fb6ace9e8
+  Building wheel for python-libnmap (pyproject.toml) ... done
+  Created wheel for python-libnmap: filename=python_libnmap-0.7.3-py3-none-any.whl size=37619 sha256=e87f19239580dea37139827e102183807953ed4ac435d3469533a9d2f67b058f
+  Stored in directory: /home/astrid/.cache/pip/wheels/4f/f4/c0/bc056e55524f5dbe867e2b136e6d9c1cb8d33575854130ad71
+  Building wheel for termcolor (pyproject.toml) ... done
+  Created wheel for termcolor: filename=termcolor-1.1.0-py3-none-any.whl size=4902 sha256=f3c3dbc7c7a131d55592ea57e2bc0209fecf5b33175a1d375c7cece40ce1ab47
+  Stored in directory: /home/astrid/.cache/pip/wheels/98/c1/20/700ac571eff732b51b81f9274796d96652d71fa5d7e8b32473
+  Building wheel for JsonForm (pyproject.toml) ... done
+  Created wheel for JsonForm: filename=jsonform-0.0.2-py3-none-any.whl size=3359 sha256=308f0a0f4f91268a0c4e24688b731b05f11f5b0666e536468dce39c5e387e38f
+  Stored in directory: /home/astrid/.cache/pip/wheels/0b/29/3c/f5b5085becdbee0b282b60cda0028607f67adf8f099316a4a7
+  Building wheel for JsonSir (pyproject.toml) ... done
+  Created wheel for JsonSir: filename=jsonsir-0.0.2-py3-none-any.whl size=4797 sha256=1c22b40f0665c152251cc18e5eeb22b4b8d3f8a1bd754fd2e57e46102e569cce
+  Stored in directory: /home/astrid/.cache/pip/wheels/a8/ca/73/b3f5177e372c0c5057c77971c17b0b45f84381d0224b908e0a
+Successfully built crackmapexec aioconsole impacket neo4j oscrypto python-libnmap termcolor JsonForm JsonSir
+Installing collected packages: termcolor, pytz, python-libnmap, pyperclip, pyasn1, JsonSir, asn1crypto, arc4, xmltodict, wcwidth, urllib3, unicrypto, tqdm, terminaltables, tabulate, sqlalchemy, soupsieve, rpds-py, PyYAML, pyparsing, pylnk3, pygments, pycryptodome, pyasn1-modules, Pillow, oscrypto, netaddr, neo4j, msgpack, minidump, mdurl, lxml, idna, h11, future, colorama, certifi, bitstruct, bcrypt, attrs, aiosqlite, aioconsole, requests, referencing, python-easyconfig, pynacl, prompt-toolkit, markdown-it-py, beautifulsoup4, asn1tools, winacl, rich, pyspnego, paramiko, jsonschema-specifications, bs4, asysocks, pypsrp, minikerberos, jsonschema, dsinternals, aiowinreg, JsonForm, impacket, asyauth, aesedb, resource, pywerview, msldap, masky, dploot, bloodhound, aiosmb, aardwolf, pypykatz, lsassy, crackmapexec
+  Attempting uninstall: pyasn1
+    Found existing installation: pyasn1 0.6.5
+    Uninstalling pyasn1-0.6.5:
+      Successfully uninstalled pyasn1-0.6.5
+  Attempting uninstall: pyasn1-modules
+    Found existing installation: pyasn1_modules 0.4.2
+    Uninstalling pyasn1_modules-0.4.2:
+      Successfully uninstalled pyasn1_modules-0.4.2
+  Attempting uninstall: impacket
+    Found existing installation: impacket 0.14.0.dev0+20261118.12900.0957bf26
+    Uninstalling impacket-0.14.0.dev0+20261118.12900.0957bf26:
+      Successfully uninstalled impacket-0.14.0.dev0+20261118.12900.0957bf26
+Successfully installed JsonForm-0.0.2 JsonSir-0.0.2 Pillow-13.0.0 PyYAML-6.0.3 aardwolf-0.2.17 aesedb-0.1.8 aioconsole-0.3.3 aiosmb-0.4.14 aiosqlite-0.18.0 aiowinreg-0.0.13 arc4-0.5.0 asn1crypto-1.5.1 asn1tools-0.169.0 asyauth-0.0.25 asysocks-0.2.19 attrs-26.1.0 bcrypt-5.0.0 beautifulsoup4-4.15.0 bitstruct-8.24.0 bloodhound-1.9.0 bs4-0.0.2 certifi-2026.10.23 colorama-0.4.6 crackmapexec-6.1.0 dploot-2.7.4 dsinternals-1.2.5 future-1.0.0 h11-0.16.0 idna-3.20 impacket-0.12.0.dev1+20230909.154612.3beeda7c jsonschema-4.26.0 jsonschema-specifications-2025.9.1 lsassy-3.1.16 lxml-4.9.3 markdown-it-py-4.3.0 masky-0.2.1 mdurl-0.1.2 minidump-0.0.24 minikerberos-0.4.12 msgpack-1.2.4 msldap-0.5.15 neo4j-4.4.13 netaddr-1.3.0 oscrypto-1.3.0 paramiko-2.12.0 prompt-toolkit-3.0.53 pyasn1-0.4.8 pyasn1-modules-0.3.0 pycryptodome-4.5.0 pygments-2.21.0 pylnk3-0.4.3 pynacl-1.6.2 pyparsing-3.3.3 pyperclip-1.11.0 pypsrp-0.7.0 pypykatz-0.6.13 pyspnego-0.12.4 python-easyconfig-0.1.7 python-libnmap-0.7.3 pytz-2026.6 pywerview-0.3.3 referencing-0.37.0 requests-2.34.2 resource-0.2.1 rich-13.9.4 rpds-py-2026.9.1 soupsieve-4.1.1 sqlalchemy-2.1.9 tabulate-0.10.0 termcolor-1.1.0 terminaltables-3.1.10 tqdm-4.70.1 unicrypto-0.0.12 urllib3-2.8.0 wcwidth-0.9.4 winacl-0.1.9 xmltodict-0.12.0
+/opt/security_tools/venv_cme/bin/cme
+/opt/security_tools/CrackMapExec/cme/cli.py:31: SyntaxWarning: invalid escape sequence '\ '
+  """,
+/opt/security_tools/CrackMapExec/cme/cmedb.py:254: SyntaxWarning: invalid escape sequence '\{'
+  f"{user[1]}\{user[2]}",  # userID
+[*] First time use detected
+(venv_cme) astrid@astrid-B85-HD3-A:/opt/security_tools/CrackMapExec$ 

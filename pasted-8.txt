@@ -1,0 +1,73 @@
+\udc90\udcf7:: command not found
+\udca0m:: command not found
+astrid@astrid-B85-HD3-A:~$ cd /home/astrid/MCP-Kali-Server  # O el camino donde esté
+astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ source .venv/bin/activate
+(.venv) astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ echo "1212" | sudo -S pkill -9 -f python
+echo "1212" | sudo -S pkill -9 -f flask
+echo "1212" | sudo -S pkill -9 -f server.py
+sleep 2
+[sudo] password for astrid: Killed
+Killed
+Killed
+(.venv) astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ lsof -i :5000
+# Debería mostrar nada o muy poco
+(.venv) astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ # Si el 5000 quedó libre:
+./server.py --ip 127.0.0.1 --port 5000
+
+# Si el 5000 sigue ocupado, usar 5001:
+./server.py --ip 127.0.0.1 --port 5001
+2026-11-06 20:17:12,613 [INFO] Starting Kali Linux Tools API Server on 127.0.0.1:5000
+ * Serving Flask app 'server'
+ * Debug mode: off
+Address already in use
+Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+2026-11-06 20:17:12,899 [INFO] Starting Kali Linux Tools API Server on 127.0.0.1:5001
+ * Serving Flask app 'server'
+ * Debug mode: off
+2026-11-06 20:17:12,902 [INFO] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5001
+2026-11-06 20:17:12,903 [INFO] Press CTRL+C to quit
+(.venv) astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ curl -s http://127.0.0.1:5000/health  # o 500101
+(.venv) astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ cd /home/astrid/MCP-Kali-Server
+source .venv/bin/activate
+echo "1212" | sudo -S pkill -9 -f python
+echo "1212" | sudo -S pkill -9 -f flask
+echo "1212" | sudo -S pkill -9 -f server.py
+sleep 2
+lsof -i :5000
+Killed
+Killed
+Killed
+(.venv) astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ curl -s http://127.0.0.1:5001/health
+(.venv) astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ # Verificar si el proceso del servidor sigue corriendo
+ps aux | grep server.py
+
+# Probar curl con verbose (más detalles)
+curl -v http://127.0.0.1:5001/health
+astrid     61498  0.0  0.0   9288  2324 pts/5    S+   20:25   0:00 grep --color=auto server.py
+*   Trying 127.0.0.1:5001...
+* connect to 127.0.0.1 port 5001 from 127.0.0.1 port 48372 failed: Connection refused
+* Failed to connect to 127.0.0.1 port 5001 after 0 ms: Couldn't connect to server
+* Closing connection
+curl: (7) Failed to connect to 127.0.0.1 port 5001 after 0 ms: Couldn't connect to server
+(.venv) astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ cd /home/astrid/MCP-Kali-Server
+source .venv/bin/activate
+(.venv) astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ ^[[200~echo "1212" | sudo -S pkill -9 -f python
+[sudo] password for astrid: echo: command not found
+
+sudo: no password was provided
+sudo: a password is required
+(.venv) astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ echo "1212" | sudo -S pkill -9 -f flask
+[sudo] password for astrid: Killed
+(.venv) astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ sleep 2~^[[200~lsof -i :5001
+sleep: invalid option -- 'i'
+Try 'sleep --help' for more information.
+(.venv) astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ # Debería mostrar nada (o muy poco)~
+(.venv) astrid@astrid-B85-HD3-A:~/MCP-Kali-Server$ ./server.py --ip 127.0.0.1 --port 5001
+2026-11-06 20:34:02,169 [INFO] Starting Kali Linux Tools API Server on 127.0.0.1:5001
+ * Serving Flask app 'server'
+ * Debug mode: off
+2026-11-06 20:34:02,172 [INFO] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5001
+2026-11-06 20:34:02,173 [INFO] Press CTRL+C to quit
+

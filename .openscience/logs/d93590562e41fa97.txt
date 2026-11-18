@@ -1,0 +1,4 @@
+  AICopilot/freecad_mcp_handler.py:1484 | python.lang.security.audit.exec-detected.exec-detected
+  AICopilot/freecad_mcp_handler.py:1490 | python.lang.security.audit.eval-detected.eval-detected
+  AICopilot/freecad_mcp_handler.py:1493 | python.lang.security.audit.exec-detected.exec-detected
+  AICopilot/handlers/macro_ops.py:294 | python.lang.security.audit.exec-detected.exec-detected

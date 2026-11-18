@@ -1,0 +1,2 @@
+project.py: OK
+test_kdenlive_mcp.py: OK

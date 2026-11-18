@@ -1,0 +1,437 @@
+
+============================================================
+🔧 Probando: kali_health
+   Argumentos: {}
+============================================================
+✅ Contenedor Kali MCP operativo
+Comando de prueba: nmap --version | head -1
+Salida: Nmap version 7.991 ( https://nmap.org )
+Platform: x86_64-pc-linux-gnu
+Compiled with: liblua-5.4.9 openssl-3.6.5 libssh2-1.11.1 libz-1.3.2 libpcre2-10.48 libpcap-1.11.0 nmap-libdnet-1.18.0 ipv6
+Compiled without:
+Available nsock engines: epoll poll select
+
+
+============================================================
+🔧 Probando: kali_nmap
+   Argumentos: {'target': '127.0.0.1', 'options': '-sV -p 22,80,443,5000,11434'}
+============================================================
+🔧 Herramienta: kali_nmap
+📋 Comando ejecutado: nmap -sV -p 22,80,443,5000,11434 127.0.0.1
+📊 Código de salida: 0
+
+📤 Salida:
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-05 21:15 +0000
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000018s latency).
+
+PORT      STATE  SERVICE VERSION
+22/tcp    closed ssh
+80/tcp    closed http
+443/tcp   closed https
+5000/tcp  closed upnp
+11434/tcp closed ollama
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.23 seconds
+
+
+
+============================================================
+🔧 Probando: kali_nikto
+   Argumentos: {'target': 'http://127.0.0.1:5000', 'options': '-Tuning 4'}
+============================================================
+🔧 Herramienta: kali_nikto
+📋 Comando ejecutado: nikto -h http://127.0.0.1:5000 -Tuning 4
+📊 Código de salida: 0
+
+📤 Salida:
+- Nikto v2.6.1
+---------------------------------------------------------------------------
++ [FAIL] Unable to connect to 127.0.0.1:5000.
+
+
+⚠️ Errores:
+Argument "Unable to connect to 127.0.0.1:5000" isn't numeric in numeric ne (!=) at /var/lib/nikto/nikto.pl line 155.
+
+
+
+============================================================
+🔧 Probando: kali_sqlmap
+   Argumentos: {'target': 'http://127.0.0.1:5000/', 'options': '--batch --level=1 --risk=1 --timeout=10'}
+============================================================
+🔧 Herramienta: kali_sqlmap
+📋 Comando ejecutado: sqlmap -u http://127.0.0.1:5000/ --batch --level=1 --risk=1 --timeout=10
+📊 Código de salida: 0
+
+📤 Salida:
+        ___
+       __H__
+ ___ ___[)]_____ ___ ___  {1.10.10#stable}
+|_ -| . [)]     | .'| . |
+|___|_  ["]_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 21:15:21 /2026-11-05/
+
+[21:15:21] [INFO] testing connection to the target URL
+[21:15:21] [CRITICAL] unable to connect to the target URL ('Connection refused'). sqlmap is going to retry the request(s)
+[21:15:21] [WARNING] if the problem persists please check that the provided target URL is reachable. In case that it is, you can try to rerun with switch '--random-agent' and/or proxy switches ('--proxy', '--proxy-file'...)
+[21:15:22] [CRITICAL] unable to connect to the target URL ('Connection refused')
+
+[*] ending @ 21:15:22 /2026-11-05/
+
+
+
+
+============================================================
+🔧 Probando: kali_nuclei
+   Argumentos: {'target': 'http://127.0.0.1:5000/', 'options': '-severity low,medium,high,critical -timeout 10'}
+============================================================
+🔧 Herramienta: kali_nuclei
+📋 Comando ejecutado: nuclei -u http://127.0.0.1:5000/ -severity low,medium,high,critical -timeout 10
+📊 Código de salida: 0
+
+⚠️ Errores:
+
+                     __     _
+   ____  __  _______/ /__  (_)
+  / __ \/ / / / ___/ / _ \/ /
+ / / / / /_/ / /__/ /  __/ /
+/_/ /_/\__,_/\___/_/\___/_/   v3.11.1
+
+		projectdiscovery.io
+
+[[34mINF[0m] nuclei-templates are not installed, installing...
+[[34mINF[0m] Your current nuclei-templates  are outdated. Latest is v10.5.1
+[[34mINF[0m] Successfully updated nuclei-templates (v10.5.1) to /root/.local/nuclei-templates. GoodLuck!
+
+Nuclei Templates v10.5.1 Changelog
+┌───────┬───────┬──────────┬─────────┐
+│ TOTAL │ ADDED │ MODIFIED │ REMOVED │
+├───────┼───────┼──────────┼─────────┤
+│ 14434 │ 14434 │ 0        │ 0       │
+└───────┴───────┴──────────┴─────────┘
+[[34mINF[0m] Current nuclei version: v3.11.1 ([91moutdated[0m)
+[[34mINF[0m] Current nuclei-templates version: v10.5.1 ([91moutdated[0m)
+[[34mINF[0m] New templates added in latest release: 68
+[[34mINF[0m] Templates loaded for current scan: 7137
+[[34mINF[0m] Executing 7137 signed templates from projectdiscovery/nuclei-templates
+[[34mINF[0m] Targets loaded for current scan: 1
+[[34mINF[0m] Templates clustered: 475 (Reduced 408 Requests)
+[[34mINF[0m] Skipped 127.0.0.1:5000 from target list as found unresponsive permanently: Get "http://127.0.0.1:5000/": cause="port closed or filtered" address=127.0.0.1:5000 chain="connection refused"
+[[34mINF[0m] S
+... [truncado]
+
+============================================================
+🔧 Probando: kali_ffuf
+   Argumentos: {'target': 'http://127.0.0.1:5000/FUZZ', 'wordlist': '/usr/share/wordlists/dirb/common.txt', 'options': '-mc 200,301,302,403'}
+============================================================
+🔧 Herramienta: kali_ffuf
+📋 Comando ejecutado: ffuf -u http://127.0.0.1:5000/FUZZ -w /usr/share/wordlists/dirb/common.txt -mc 200,301,302,403
+📊 Código de salida: 1
+
+📤 Salida:
+Fuzz Faster U Fool - v2.3.0
+
+HTTP OPTIONS:
+  -H                  Header "Name: Value", separated by colon. Multiple -H flags are accepted.
+  -X                  HTTP method to use
+  -b                  Cookie data "NAME1=VALUE1; NAME2=VALUE2" for copy as curl functionality.
+  -cc                 Client cert for authentication. Client key needs to be defined as well for this to work
+  -ck                 Client key for authentication. Client certificate needs to be defined as well for this to work
+  -d                  POST data
+  -http2              Use HTTP2 protocol (default: false)
+  -ignore-body        Do not fetch the response content. (default: false)
+  -postflight         Raw HTTP request file to run after each fuzzing request (repeatable, order matters)
+  -postflight-var     Extract a variable from the preceding -postflight response: "NAME:regex" (repeatable)
+  -preflight          Raw HTTP request file to run before each fuzzing request (repeatable, order matters)
+  -preflight-error    Preflight error handling: "abort" or "ignore" (default: abort)
+  -preflight-mode     Preflight execution mode: "per-request" or "per-thread" (default: per-request)
+  -preflight-var      Extract a variable from the preceding -preflight response: "NAME:regex" (repeatable)
+  -r                  Follow redirects (defaul
+... [truncado]
+
+============================================================
+🔧 Probando: kali_subfinder
+   Argumentos: {'target': 'localhost', 'options': '-silent'}
+============================================================
+🔧 Herramienta: kali_subfinder
+📋 Comando ejecutado: subfinder -d localhost -silent
+📊 Código de salida: 0
+
+📤 Salida:
+server02.counterintel.localhost
+server2.hunter.localhost
+mail.regency.localhost
+mse-ca-mail.corp.mse.localhost
+exch2010.tl.localhost
+exchvm.nwcnet.localhost
+fndlync01.5ninesdata.localhost
+mail03.regency.localhost
+mail.localhost
+1stusexchange01.1stuscu.localhost
+owa.regency.localhost
+sbs.allsaintsschool.localhost
+tools.sonoma.edu.localhost
+www.localhost
+naeu2.naeuinc.localhost
+autodiscover.localhost
+autodiscover.regency.localhost
+mail02.regency.localhost
+
+
+
+============================================================
+🔧 Probando: kali_netexec
+   Argumentos: {'target': '127.0.0.1', 'protocol': 'smb', 'options': ''}
+============================================================
+🔧 Herramienta: kali_netexec
+📋 Comando ejecutado: netexec smb 127.0.0.1 
+📊 Código de salida: 0
+
+📤 Salida:
+[*] First time use detected
+[*] Creating home directory structure
+[*] Creating missing folder logs
+[*] Creating missing folder modules
+[*] Creating missing folder workspaces
+[*] Creating missing folder obfuscated_scripts
+[*] Creating missing folder screenshots
+[*] Creating missing folder logs/sam
+[*] Creating missing folder logs/lsa
+[*] Creating missing folder logs/ntds
+[*] Creating missing folder logs/dpapi
+[*] Creating default workspace
+[*] Initializing MSSQL protocol database
+[*] Initializing FTP protocol database
+[*] Initializing NFS protocol database
+[*] Initializing WINRM protocol database
+[*] Initializing SMB protocol database
+[*] Initializing SSH protocol database
+[*] Initializing VNC protocol database
+[*] Initializing RDP protocol database
+[*] Initializing LDAP protocol database
+[*] Initializing WMI protocol database
+[*] Copying default configuration file
+
+
+
+============================================================
+🔧 Probando: kali_responder
+   Argumentos: {'interface': 'lo', 'options': '-wrf'}
+============================================================
+🔧 Herramienta: kali_responder
+📋 Comando ejecutado: responder -I lo -wrf
+📊 Código de salida: 2
+
+📤 Salida:
+                                         __
+  .----.-----.-----.-----.-----.-----.--|  |.-----.----.
+  |   _|  -__|__ --|  _  |  _  |     |  _  ||  -__|   _|
+  |__| |_____|_____|   __|_____|__|__|_____||_____|__|
+                   |__|
+
+
+
+⚠️ Errores:
+Usage: python3 Responder.py -I eth0 -v
+
+Responder.py: error: no such option: -r
+
+
+
+============================================================
+🔧 Probando: kali_hashcat
+   Argumentos: {'hashfile': '/dev/null', 'wordlist': '/dev/null', 'options': '--help'}
+============================================================
+🔧 Herramienta: kali_hashcat
+📋 Comando ejecutado: hashcat --help /dev/null /dev/null
+📊 Código de salida: 0
+
+📤 Salida:
+hashcat (v7.1.2) starting in help mode
+
+Usage: hashcat [options]... hash|hashfile|hccapxfile [dictionary|mask|directory]...
+
+- [ Options ] -
+
+ Options Short / Long           | Type | Description                                          | Example
+================================+======+======================================================+=======================
+ -m, --hash-type                | Num  | Hash-type, references below (otherwise autodetect)   | -m 1000
+ -a, --attack-mode              | Num  | Attack-mode, see references below                    | -a 3
+ -V, --version                  |      | Print version                                        |
+ -h, --help                     |      | Print help. Use -hh to show all supported hash-modes | -h or -hh
+     --quiet                    |      | Suppress output                                      |
+     --hex-charset              |      | Assume charset is given in hex                       |
+     --hex-salt                 |      | Assume salt is given in hex                          |
+     --hex-wordlist             |      | Assume words in wordlist are given in hex            |
+     --force                    |      | Ignore warnings                                      |
+     --deprecated-check-disable |      | Enable deprecated plugins                            |
+     --status                   |  
+... [truncado]
+
+============================================================
+🔧 Probando: kali_binwalk
+   Argumentos: {'file': '/etc/hostname', 'options': ''}
+============================================================
+🔧 Herramienta: kali_binwalk
+📋 Comando ejecutado: binwalk  /etc/hostname
+📊 Código de salida: 0
+
+📤 Salida:
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+
+
+
+
+============================================================
+🔧 Probando: kali_masscan
+   Argumentos: {'target': '127.0.0.1', 'ports': '22,80,443,5000,11434', 'options': '--rate=1000'}
+============================================================
+🔧 Herramienta: kali_masscan
+📋 Comando ejecutado: masscan 127.0.0.1 -p 22,80,443,5000,11434 --rate=1000
+📊 Código de salida: 0
+
+⚠️ Errores:
+Starting masscan 1.3.2 (http://bit.ly/14GZzcT) at 2026-11-05 21:18:39 GMT
+Initiating SYN Stealth Scan
+Scanning 1 hosts [5 ports/host]
+rate:  0.00-kpps, 20.00% done, 169:19:47 remaining, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 0-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 10-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 10-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 10-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 10-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 9-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 9-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 9-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 9-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 8-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 8-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 8-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 8-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 7-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 7-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 7-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 7-secs, found=0       
+rate:  0.00-kpps, 100.00% done, waiting 6-secs, found=0       
+rate:  0.00-kpps, 100.0
+... [truncado]
+
+============================================================
+🔧 Probando: kali_wpscan
+   Argumentos: {'target': 'http://127.0.0.1:5000/', 'options': '--enumerate vp --timeout 10'}
+============================================================
+🔧 Herramienta: kali_wpscan
+📋 Comando ejecutado: wpscan --url http://127.0.0.1:5000/ --enumerate vp --timeout 10
+📊 Código de salida: 1
+
+📤 Salida:
+
+Scan Aborted: invalid option: --timeout
+
+
+
+============================================================
+🔧 Probando: kali_hydra
+   Argumentos: {'target': '127.0.0.1', 'service': 'ssh', 'user': '/dev/null', 'pass': '/dev/null', 'options': '-h'}
+============================================================
+🔧 Herramienta: kali_hydra
+📋 Comando ejecutado: hydra -L /dev/null -P /dev/null -h 127.0.0.1 ssh
+📊 Código de salida: 255
+
+📤 Salida:
+Hydra v9.7 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Syntax: hydra [[[-l LOGIN|-L FILE] [-p PASS|-P FILE]] | [-C FILE]] [-e nsr] [-o FILE] [-t TASKS] [-M FILE [-T TASKS]] [-w TIME] [-W TIME] [-f] [-s PORT] [-x MIN:MAX:CHARSET] [-c TIME] [-ISOuvVd46] [-m MODULE_OPT] [service://server[:PORT][/OPT]]
+
+Options:
+  -R        restore a previous aborted/crashed session
+  -I        ignore an existing restore file (don't wait 10 seconds)
+  -S        perform an SSL connect
+  -s PORT   if the service is on a different default port, define it here
+  -l LOGIN or -L FILE  login with LOGIN name, or load several logins from FILE
+  -p PASS  or -P FILE  try password PASS, or load several passwords from FILE
+  -x MIN:MAX:CHARSET  password bruteforce generation, type "-x -h" to get help
+  -y        disable use of symbols in bruteforce, see above
+  -r        use a non-random shuffling method for option -x
+  -e nsr    try "n" null password, "s" login as pass and/or "r" reversed login
+  -u        loop around users, not passwords (effective! implied with -x)
+  -C FILE   colon separated "login:pass" format, instead of -L/-P options
+  -M FILE   list of servers to attack, one entry per line, ':' to specify port
+  -D XofY  
+... [truncado]
+
+============================================================
+🔧 Probando: kali_john
+   Argumentos: {'hashfile': '/dev/null', 'wordlist': '/dev/null', 'options': '--help'}
+============================================================
+🔧 Herramienta: kali_john
+📋 Comando ejecutado: john --help --wordlist=/dev/null /dev/null
+📊 Código de salida: 1
+
+⚠️ Errores:
+Created directory: /root/.john
+Unknown option: "--help"
+
+
+
+============================================================
+🔧 Probando: kali_dirb
+   Argumentos: {'target': 'http://127.0.0.1:5000/', 'wordlist': '/usr/share/wordlists/dirb/common.txt', 'options': ''}
+============================================================
+🔧 Herramienta: kali_dirb
+📋 Comando ejecutado: dirb http://127.0.0.1:5000/ /usr/share/wordlists/dirb/common.txt 
+📊 Código de salida: 255
+
+📤 Salida:
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Thu Nov  5 21:19:52 2026
+URL_BASE: http://127.0.0.1:5000/
+WORDLIST_FILES: /usr/share/wordlists/dirb/common.txt
+
+-----------------
+
+*** Generating Wordlist...
+(!) FATAL: Error opening wordlist file: /usr/share/wordlists/dirb/common.txt
+
+
+
+============================================================
+🔧 Probando: kali_gobuster
+   Argumentos: {'mode': 'dir', 'target': 'http://127.0.0.1:5000/', 'wordlist': '/usr/share/wordlists/dirb/common.txt', 'options': ''}
+============================================================
+🔧 Herramienta: kali_gobuster
+📋 Comando ejecutado: gobuster dir -u http://127.0.0.1:5000/ -w /usr/share/wordlists/dirb/common.txt 
+📊 Código de salida: 1
+
+⚠️ Errores:
+2026/11/05 21:19:53 wordlist file "/usr/share/wordlists/dirb/common.txt" does not exist: stat /usr/share/wordlists/dirb/common.txt: no such file or directory
+
+
+
+============================================================
+🔧 Probando: kali_command
+   Argumentos: {'command': 'echo "Kali MCP funcionando"', 'timeout': 10}
+============================================================
+Comando: echo "Kali MCP funcionando"
+Código de salida: 0
+
+Salida:
+Kali MCP funcionando
+
+
+
+============================================================
+✅ Todas las pruebas completadas
+============================================================

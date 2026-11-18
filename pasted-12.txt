@@ -1,0 +1,34 @@
+\udc90\udcf7:: command not found
+\udca0m:: command not found
+astrid@astrid-B85-HD3-A:~$ ^[[200~# 1. Activar tu entorno virtual (si no está activo)
+bash: syntax error near unexpected token `('
+astrid@astrid-B85-HD3-A:~$ source /opt/security_tools/venv_cme/bin/activate
+(venv_cme) astrid@astrid-B85-HD3-A:~$ 
+(venv_cme) astrid@astrid-B85-HD3-A:~$ # 2. Probar conectividad SMB básica contra localhost
+(venv_cme) astrid@astrid-B85-HD3-A:~$ cme smb 127.0.0.1 -u admin -p ""
+Command 'cme' not found, but can be installed with:
+sudo apt install cme
+(venv_cme) astrid@astrid-B85-HD3-A:~$ 
+(venv_cme) astrid@astrid-B85-HD3-A:~$ # 3. O probar enumeración LDAP
+(venv_cme) astrid@astrid-B85-HD3-A:~$ cme ldap 127.0.0.1 -u admin -p ""~
+Command 'cme' not found, but can be installed with:
+sudo apt install cme
+(venv_cme) astrid@astrid-B85-HD3-A:~$ # Verificar servicios SMB en Linux Mint
+systemctl status smbd
+systemctl status nmbd
+
+# Iniciar si están detenidos
+echo "1212" | sudo -S systemctl start smbd
+echo "1212" | sudo -S systemctl start nmbd
+
+# Verificar si el puerto 445 está abierto
+netstat -tlnp | grep 445
+# O moderno:
+ss -tlnp | grep 445
+Unit smbd.service could not be found.
+Unit nmbd.service could not be found.
+[sudo] password for astrid: Failed to start smbd.service: Unit smbd.service not found.
+Failed to start nmbd.service: Unit nmbd.service not found.
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+(venv_cme) astrid@astrid-B85-HD3-A:~$ 

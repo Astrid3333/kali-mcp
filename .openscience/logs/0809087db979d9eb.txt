@@ -1,0 +1,13 @@
+--- kali_searchsploit ---
+🔧 Herramienta: kali_searchsploit
+📋 Comando ejecutado: searchsploit apache -t 1
+📊 Código de salida: 0
+
+📤 Salida:
+---------------------------------------------- ---------------------------------
+ Exploit Title                                |  Path
+---------------------------------------------- ---------------------------------
+[01;31m[KApache[m[K + PHP < 5.3.[01;31m[K1[m[K2 / < 5.4.2 - cgi-bin Rem | php/remote/29290.c
+[01;31m[KApache[m[K + PHP < 5.3.[01;31m[K1[m[K2 / < 5.4.2 - Remote Code | php/remote/293[01;31m[K1[m[K6.py
+[01;31m[KApache[m[K 0.8.x/[01;31m[K1[m[K.0.x / NCSA HTTPd [01;31m[K1[m[K.x - 'test-c | cgi/remote/20435.txt
+[01;31m[KApache[m[K [01;31m[K1[m[K.0/[01;31m[K1[m[K.2/[01;31m[K1[m[K.3 - Server Address Disclosur | multiple/remote/

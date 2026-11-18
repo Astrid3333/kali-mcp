@@ -1,0 +1,322 @@
+\udc90\udcf7:: command not found
+\udca0m:: command not found
+astrid@astrid-B85-HD3-A:~$ apt install intel-microcode
+[sudo] password for astrid:     
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+intel-microcode is already the newest version (3.20260210.0ubuntu0.24.04.1).
+0 upgraded, 0 newly installed, 0 to remove and 17 not upgraded.
+astrid@astrid-B85-HD3-A:~$ # Opción A: Desde GitHub
+git clone https://github.com/SecureAuthCorp/impacket.git
+cd impacket
+pip install -e .  # requiere python3-full
+
+# O ejecutar directamente:
+cd /opt && git clone https://github.com/byt3bl33d3r/CrackMapExec.git
+cd CrackMapExec
+pip install -e .
+# Luego: cme <target> <command>
+Cloning into 'impacket'...
+remote: Enumerating objects: 26634, done.
+remote: Counting objects: 100% (611/611), done.
+remote: Compressing objects: 100% (312/312), done.
+remote: Total 26634 (delta 462), reused 303 (delta 299), pack-reused 26023 (from 3)
+Receiving objects: 100% (26634/26634), 12.21 MiB | 2.48 MiB/s, done.
+Resolving deltas: 100% (20284/20284), done.
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    See /usr/share/doc/python3.12/README.venv for more information.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+fatal: could not create work tree dir 'CrackMapExec': Permission denied
+bash: cd: CrackMapExec: No such file or directory
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    See /usr/share/doc/python3.12/README.venv for more information.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+astrid@astrid-B85-HD3-A:/opt$ # Descargar script directamente
+wget -q https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/linPEAS/linpeas.sh -O /opt/linpeas.sh
+chmod +x /opt/linpeas.sh
+/opt/linpeas.sh  # ejecuta análisis de privilege escalation Linux
+/opt/linpeas.sh: Permission denied
+chmod: cannot access '/opt/linpeas.sh': No such file or directory
+bash: /opt/linpeas.sh: No such file or directory
+astrid@astrid-B85-HD3-A:/opt$ # Descargar última versión desde GitHub releases
+wget -q https://github.com/skylot/jadx/releases/download/v1.4.3/jadx-1.4.3_linux.jar -O /opt/jadx.jar
+# O instalar versión más nueva desde:
+# https://github.com/skylot/jadx/releases
+
+# Ejecutar:
+java -jar /opt/jadx.jar
+# O crear wrapper:
+echo '#!/bin/bash' > /usr/local/bin/jadx
+echo 'java -jar /opt/jadx.jar "$@"' >> /usr/local/bin/jadx
+chmod +x /usr/local/bin/jadx
+/opt/jadx.jar: Permission denied
+Error: Unable to access jarfile /opt/jadx.jar
+bash: /usr/local/bin/jadx: Permission denied
+bash: /usr/local/bin/jadx: Permission denied
+chmod: cannot access '/usr/local/bin/jadx': No such file or directory
+astrid@astrid-B85-HD3-A:/opt$ # Descargar instalador .deb desde GitHub releases
+# Versión actual: https://github.com/NationalSecurityAgency/GHIDRA/releases/download/GHIDRA_10.4.2_r/ghidra_10.4.2_promote.deb
+
+wget -q https://github.com/NationalSecurityAgency/GHIDRA/releases/download/GHIDRA_10.4.2_r/ghidra_10.4.2_promote.deb -O /tmp/ghidra.deb
+echo "1212" | sudo -S apt-get install -y /tmp/ghidra.deb
+
+# Iniciar:
+ghidra
+# O abrir desde menú aplicaciones
+Reading package lists... Error!
+E: read, still have 8 to read but none left
+E: Internal error, could not locate member control.tar{.zst,.lz4,.gz,.xz,.bz2,.lzma,}
+E: Could not read meta data from /tmp/ghidra.deb
+E: The package lists or status file could not be parsed or opened.
+ghidra: command not found
+astrid@astrid-B85-HD3-A:/opt$ # Opción A: Usar virtual environment (recomendado) 
+python3 -m venv /opt/venv_cme
+source /opt/venv_cme/bin/activate
+pip install -e .
+
+# Opción B: Usar pipx (ya está instalado)
+pipx install crackmapexec  # falló antes por paquete no disponible
+
+# Opción C: pasar --break-system-packages (no recomendado)
+pip install -e . --break-system-packages
+Error: [Errno 13] Permission denied: '/opt/venv_cme'
+bash: /opt/venv_cme/bin/activate: No such file or directory
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    See /usr/share/doc/python3.12/README.venv for more information.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+Fatal error from pip prevented installation. Full pip output in file:
+    /home/astrid/.local/state/pipx/log/cmd_2026-11-18_03.01.21_pip_errors.log
+
+Some possibly relevant errors from pip install:
+    ERROR: Could not find a version that satisfies the requirement crackmapexec (from versions: none)
+    ERROR: No matching distribution found for crackmapexec
+
+Error installing crackmapexec.
+Defaulting to user installation because normal site-packages is not writeable
+WARNING: Skipping /usr/lib/python3.12/dist-packages/pybind11-2.11.1.dist-info due to invalid metadata entry 'name'
+Obtaining file:///opt
+ERROR: file:///opt does not appear to be a Python project: neither 'setup.py' nor 'pyproject.toml' found.
+astrid@astrid-B85-HD3-A:/opt$ # Usar sudo para wget + chmod
+echo "1212" | sudo -S wget -q URL -O /opt/archivo
+echo "1212" | sudo -S chmod +x /opt/archivo
+astrid@astrid-B85-HD3-A:/opt$ # Limpiar caché y reintentar
+echo "1212" | sudo -S apt-get clean
+echo "1212" | sudo -S apt-get update
+Hit:1 https://repo.radeon.com/amdgpu/6.2.1/ubuntu jammy InRelease
+Hit:2 https://brave-browser-apt-release.s3.brave.com stable InRelease          
+Hit:3 https://deb.nodesource.com/node_20.x nodistro InRelease                  
+Hit:4 http://packages.osrfoundation.org/gazebo/ubuntu-stable noble InRelease   
+Get:5 https://repo.librewolf.net librewolf InRelease [5,649 B]                 
+Ign:6 http://packages.linuxmint.com zena InRelease                             
+Hit:7 http://archive.ubuntu.com/ubuntu noble InRelease                         
+Hit:8 http://packages.linuxmint.com zena Release                               
+Hit:10 http://archive.ubuntu.com/ubuntu noble-updates InRelease                
+Hit:11 https://packages.mozilla.org/apt mozilla InRelease                      
+Hit:12 http://archive.ubuntu.com/ubuntu noble-backports InRelease   
+Hit:14 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble InRelease
+Hit:15 https://ppa.launchpadcontent.net/freecad-maintainers/freecad-stable/ubuntu noble InRelease
+Hit:13 https://hub-dist.unity3d.com/artifactory/hub-debian-prod-local stable InRelease
+Hit:16 https://ppa.launchpadcontent.net/kisak/kisak-mesa/ubuntu noble InRelease
+Hit:17 https://ppa.launchpadcontent.net/leapcodes/riseup-vpn/ubuntu noble InRelease
+Hit:18 https://ppa.launchpadcontent.net/ubuntuhandbook1/octave/ubuntu noble InRelease
+Hit:19 http://security.ubuntu.com/ubuntu noble-security InRelease              
+Hit:20 https://repo.protonvpn.com/debian stable InRelease                      
+Get:21 https://pkg.claude-desktop-debian.dev stable InRelease                  
+Hit:22 https://repository.mullvad.net/deb/stable stable InRelease              
+Fetched 8,197 B in 7s (1,193 B/s)                                              
+Error: Timeout was reached
+Reading package lists... Done
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://brave-browser-apt-release.s3.brave.com stable InRelease' doesn't support architecture 'i386'
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://packages.mozilla.org/apt mozilla InRelease' doesn't support architecture 'i386'
+astrid@astrid-B85-HD3-A:/opt$ echo "1212" | sudo -S mkdir -p /opt/tools
+echo "1212" | sudo -S chown $USER:$USER /opt/tools
+astrid@astrid-B85-HD3-A:/opt$ python3 -m venv /opt/venv_cme
+source /opt/venv_cme/bin/activate
+pip install crackmapexec  # o desde git con el venv activo
+Error: [Errno 13] Permission denied: '/opt/venv_cme'
+bash: /opt/venv_cme/bin/activate: No such file or directory
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    See /usr/share/doc/python3.12/README.venv for more information.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+astrid@astrid-B85-HD3-A:/opt$ echo "1212" | sudo -S wget -q "URL" -O /opt/tools/archivo
+echo "1212" | sudo -S chmod +x /opt/tools/archivo
+astrid@astrid-B85-HD3-A:/opt$  Paso 1: Crear directorio de trabajo con permisos apropiados
+echo "1212" | sudo -S mkdir -p /opt/security_tools
+echo "1212" | sudo -S chown $USER:$USER /opt/security_tools
+cd /opt/security_tools
+
+# Paso 2: Crear virtual environment (SÍ funciona con sudo mkdir)
+echo "1212" | sudo -S python3 -m venv /opt/security_tools/venv_cme
+echo "1212" | sudo -S chown -R $USER:$USER /opt/security_tools/venv_cme
+
+# Paso 3: Activar e instalar
+source /opt/security_tools/venv_cme/bin/activate
+
+# Paso 4: Clonar e instalar CME desde GitHub
+git clone https://github.com/SecureAuthCorp/impacket.git
+cd impacket
+pip install -e .
+
+# Paso 5: Probar instalación
+which cme && cme --help 2>&1 | head -5
+Paso: command not found
+Cloning into 'impacket'...
+remote: Enumerating objects: 26634, done.
+remote: Counting objects: 100% (611/611), done.
+remote: Compressing objects: 100% (314/314), done.
+Receiving objects:   1% (267/26634), 156.00 KiB | 269.00 KiB/Receiving objects:   1% (382/26634), 156.00 KiB | 269.00 KiB/Receiving objects:   2% (533/26634), 372.00 KiB | 341.00 KiB/Receiving objects:   3% (800/26634), 372.00 KiB | 341.00 KiB/Receiving objects:   4% (1066/26634), 372.00 KiB | 341.00 KiBReceiving objects:   5% (1332/26634), 644.00 KiB | 390.00 KiBReceiving objects:   6% (1599/26634), 644.00 KiB | 390.00 KiBReceiving objects:   7% (1865/26634), 644.00 KiB | 390.00 KiBReceiving objects:   8% (2131/26634), 644.00 KiB | 390.00 KiBReceiving objects:   8% (2135/26634), 644.00 KiB | 390.00 KiBReceiving objects:   9% (2398/26634), 644.00 KiB | 390.00 KiBReceiving objects:  10% (2664/26634), 644.00 KiB | 390.00 KiBReceiving objects:  11% (2930/26634), 1.05 MiB | 497.00 KiB/sremote: Total 26634 (delta 461), reused 301 (delta 297), pack-reused 26023 (from 3)
+Receiving objects: 100% (26634/26634), 12.21 MiB | 1.80 MiB/s, done.
+Resolving deltas: 100% (20283/20283), done.
+Obtaining file:///opt/security_tools/impacket
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+Collecting pyasn1>=0.2.3 (from impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading pyasn1-0.6.5-py3-none-any.whl.metadata (8.4 kB)
+Collecting pyasn1_modules (from impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting pycryptodomex (from impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading pycryptodomex-3.24.2-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.4 kB)
+Collecting pyOpenSSL (from impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading pyopenssl-26.4.0-py3-none-any.whl.metadata (22 kB)
+Collecting six (from impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting ldap3!=2.5.0,!=2.5.2,!=2.6,>=2.5 (from impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading ldap3-2.9.1-py2.py3-none-any.whl.metadata (5.4 kB)
+Collecting ldapdomaindump>=0.9.0 (from impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading ldapdomaindump-0.10.0-py3-none-any.whl.metadata (512 bytes)
+Collecting flask>=1.0 (from impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+Collecting charset_normalizer (from impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+     ━━━━━━━━━━━━━━━━━━━━ 46.4/46.4 kB 312.7 kB/s eta 0:00:00
+Collecting blinker>=1.9.0 (from flask>=1.0->impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting click>=8.1.3 (from flask>=1.0->impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Using cached click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting itsdangerous>=2.2.0 (from flask>=1.0->impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.1.2 (from flask>=1.0->impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting markupsafe>=2.1.1 (from flask>=1.0->impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting werkzeug>=3.1.0 (from flask>=1.0->impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+Collecting dnspython (from ldapdomaindump>=0.9.0->impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Downloading dnspython-2.9.2-py3-none-any.whl.metadata (5.8 kB)
+Collecting cryptography<51,>=49.0.0 (from pyOpenSSL->impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Using cached cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+Collecting typing-extensions>=4.9 (from pyOpenSSL->impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting cffi>=2.0.0 (from cryptography<51,>=49.0.0->pyOpenSSL->impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Using cached cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography<51,>=49.0.0->pyOpenSSL->impacket==0.14.0.dev0+20261118.12900.0957bf26)
+  Using cached pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+   ━━━━━━━━━━━━━━━━━━━━ 103.4/103.4 kB 581.3 kB/s eta 0:00:00
+Downloading ldap3-2.9.1-py2.py3-none-any.whl (432 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 432.2/432.2 kB 1.1 MB/s eta 0:00:00
+Downloading ldapdomaindump-0.10.0-py3-none-any.whl (19 kB)
+Downloading pyasn1-0.6.5-py3-none-any.whl (84 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 84.8/84.8 kB 665.7 kB/s eta 0:00:00
+Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 257.6/257.6 kB 1.3 MB/s eta 0:00:00
+Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+   ━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 kB 989.1 kB/s eta 0:00:00
+Downloading pycryptodomex-3.24.2-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 2.3 MB/s eta 0:00:00
+Downloading pyopenssl-26.4.0-py3-none-any.whl (56 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 565.3 kB/s eta 0:00:00
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Using cached click-8.5.1-py3-none-any.whl (126 kB)
+Using cached cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 1.3 MB/s eta 0:00:00
+Downloading markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 228.7/228.7 kB 1.9 MB/s eta 0:00:00
+Downloading dnspython-2.9.2-py3-none-any.whl (360 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━ 360.5/360.5 kB 2.1 MB/s eta 0:00:00
+Using cached cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+Using cached pycparser-3.12-py3-none-any.whl (62 kB)
+Building wheels for collected packages: impacket
+  Building editable for impacket (pyproject.toml) ... done
+  Created wheel for impacket: filename=impacket-0.14.0.dev0+20261118.12900.0957bf26-0.editable-py3-none-any.whl size=374857 sha256=9959e4b2e9ba546b0315d4ce36880d8022702153ba1fcb2a1045bde185c292a9
+  Stored in directory: /tmp/pip-ephem-wheel-cache-uxmn01ba/wheels/5c/10/cc/76ed1c014355a9e16655550905ffbba33d2ff3f767962edf63
+Successfully built impacket
+Installing collected packages: typing-extensions, six, pycryptodomex, pycparser, pyasn1, markupsafe, itsdangerous, dnspython, click, charset_normalizer, blinker, werkzeug, pyasn1_modules, ldap3, jinja2, cffi, ldapdomaindump, flask, cryptography, pyOpenSSL, impacket
+Successfully installed blinker-1.9.0 cffi-2.1.1 charset_normalizer-3.5.2 click-8.5.1 cryptography-50.0.2 dnspython-2.9.2 flask-3.1.3 impacket-0.14.0.dev0+20261118.12900.0957bf26 itsdangerous-2.2.0 jinja2-3.1.6 ldap3-2.9.1 ldapdomaindump-0.10.0 markupsafe-3.0.4 pyOpenSSL-26.4.0 pyasn1-0.6.5 pyasn1_modules-0.4.2 pycparser-3.12 pycryptodomex-3.24.2 six-1.17.0 typing-extensions-4.16.0 werkzeug-3.1.9
+(venv_cme) astrid@astrid-B85-HD3-A:/opt/security_tools/impacket$ 

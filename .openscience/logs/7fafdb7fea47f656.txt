@@ -1,0 +1,2 @@
+Servidor iniciado con PID 269271
+/bin/bash: line 1: /hdl: No such file or directory

@@ -1,0 +1,27 @@
+✅ Servidor MCP cargado con 26 herramientas
+   • kali_nmap
+   • kali_nikto
+   • kali_sqlmap
+   • kali_nuclei
+   • kali_ffuf
+   • kali_subfinder
+   • kali_netexec
+   • kali_responder
+   • kali_hashcat
+   • kali_binwalk
+   • kali_masscan
+   • kali_wpscan
+   • kali_hydra
+   • kali_john
+   • kali_dirb
+   • kali_gobuster
+   • kali_searchsploit
+   • kali_amass
+   • kali_exiftool
+   • kali_foremost
+   • kali_steghide
+   • kali_proxychains
+   • kali_crackmapexec
+   • kali_bloodhound
+   • kali_command
+   • kali_health

@@ -1,0 +1,14 @@
+Total findings: 13
+  tritos_britannica.py:18 | python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected
+  tritos_britannica.py:48 | python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected
+  tritos_encyclopedia.py:25 | python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected
+  tritos_encyclopedia.py:46 | python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected
+  tritos_encyclopedia.py:72 | python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected
+  tritos_encyclopedia.py:85 | python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected
+  tritos_encyclopedia.py:107 | python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected
+  tritos_encyclopedia.py:130 | python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected
+  tritos_encyclopedia.py:150 | python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected
+  tritos_encyclopedia.py:171 | python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected
+  tritos_encyclopedia.py:191 | python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected
+  tritos_encyclopedia.py:212 | python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected
+  tritos_encyclopedia.py:232 | python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected

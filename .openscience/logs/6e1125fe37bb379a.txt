@@ -1,0 +1,4 @@
+  File "/tmp/ternario-ancestral-sensores/tritos_gui.py", line 16
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))SCIENCE_BIN = os.path.join(SCRIPT_DIR, "tritos_science")
+                                                           ^^^^^^^^^^^
+SyntaxError: invalid syntax

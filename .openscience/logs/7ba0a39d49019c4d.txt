@@ -1,0 +1,51 @@
+==============================================
+  VERIFICACIÓN DE TODOS LOS CERTIFICADOS PKI
+==============================================
+
+=== CA Raíz ===
+  Archivo: /home/astrid/Documents/OpenScience/projects/githu/pki/ca/ca.crt
+  Sujeto: subject=C = CL, ST = Region Metropolitana, L = Santiago, O = Kalix OpenScience, OU = PKI Authority, CN = Kalix Root CA
+  Emisor: issuer=C = CL, ST = Region Metropolitana, L = Santiago, O = Kalix OpenScience, OU = PKI Authority, CN = Kalix Root CA
+  Válido: Nov  6 05:35:21 2026 GMT al Nov  3 05:35:21 2036 GMT
+  Serie: CDB739E24B484941627226B3FACD7FDF188705
+  ✅ Firma de CA: VÁLIDA
+  ✅ Válido por 3649 días más
+
+=== codigos-potenciados ===
+  Archivo: /home/astrid/Documents/OpenScience/projects/githu/pki/servers/codigos-potenciados.crt
+  Sujeto: subject=C = CL, ST = Region Metropolitana, O = Kalix OpenScience, OU = MCP Servers, CN = localhost
+  Emisor: issuer=C = CL, ST = Region Metropolitana, L = Santiago, O = Kalix OpenScience, OU = PKI Authority, CN = Kalix Root CA
+  Válido: Nov  6 05:35:39 2026 GMT al Feb  8 05:35:39 2029 GMT
+  Serie: 03
+  ✅ Firma de CA: VÁLIDA
+  ✅ Válido por 824 días más
+
+=== mcp-ecosystem-chiloe ===
+  Archivo: /home/astrid/Documents/OpenScience/projects/githu/pki/servers/mcp-ecosystem-chiloe.crt
+  Sujeto: subject=C = CL, ST = Region Metropolitana, O = Kalix OpenScience, OU = MCP Servers, CN = localhost
+  Emisor: issuer=C = CL, ST = Region Metropolitana, L = Santiago, O = Kalix OpenScience, OU = PKI Authority, CN = Kalix Root CA
+  Válido: Nov  6 05:35:35 2026 GMT al Feb  8 05:35:35 2029 GMT
+  Serie: 01
+  ✅ Firma de CA: VÁLIDA
+  ✅ Válido por 824 días más
+
+=== octave-mcp ===
+  Archivo: /home/astrid/Documents/OpenScience/projects/githu/pki/servers/octave-mcp.crt
+  Sujeto: subject=C = CL, ST = Region Metropolitana, O = Kalix OpenScience, OU = MCP Servers, CN = localhost
+  Emisor: issuer=C = CL, ST = Region Metropolitana, L = Santiago, O = Kalix OpenScience, OU = PKI Authority, CN = Kalix Root CA
+  Válido: Nov  6 05:35:37 2026 GMT al Feb  8 05:35:37 2029 GMT
+  Serie: 02
+  ✅ Firma de CA: VÁLIDA
+  ✅ Válido por 824 días más
+
+=== evolve-agent ===
+  Archivo: /home/astrid/Documents/OpenScience/projects/githu/pki/clients/evolve-agent.crt
+  Sujeto: subject=C = CL, ST = Region Metropolitana, O = Kalix OpenScience, OU = MCP Clients, CN = evolve-agent
+  Emisor: issuer=C = CL, ST = Region Metropolitana, L = Santiago, O = Kalix OpenScience, OU = PKI Authority, CN = Kalix Root CA
+  Válido: Nov  6 05:35:50 2026 GMT al Feb  8 05:35:50 2029 GMT
+  Serie: 04
+  ✅ Firma de CA: VÁLIDA
+  ✅ Válido por 824 días más
+
+==============================================
+  Verificación completa

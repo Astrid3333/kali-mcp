@@ -1,0 +1,5 @@
+/home/astrid/.local/bin/zebbern-kali-mcp
+/home/astrid/.local/bin/zebbern-kali-mcp
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'zebbern_kali_mcp'

@@ -1,0 +1,2 @@
+translate_c.py: OK
+translate_f77.py: OK

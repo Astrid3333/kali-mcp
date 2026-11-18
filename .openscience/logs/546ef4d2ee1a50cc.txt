@@ -1,0 +1,2 @@
+tritos_codec.py: OK
+tritos_gui.py: OK

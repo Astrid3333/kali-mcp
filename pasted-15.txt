@@ -1,0 +1,40 @@
+#!/bin/bash
+echo "=== KALI VERIFICATION TOOLKIT STATUS ==="
+echo ""
+echo "📷 Image Protection:"
+echo "  - exiftool: $(exiftool -ver 2>&1 | head -1)"
+echo "  - steghide: $(steghide -h 2>&1 | head -1 | tr -d ' ')"
+echo "  - convert/imagemagick: $(convert -version 2>&1 | head -1 | tr -d ' ')"
+
+echo ""
+echo "🎵 Audio Verification:"
+python3 -c "
+import subprocess, shutil
+print('  - fpcalc available:', shutil.which('fpcalc') is not None)
+" 
+
+echo "  - librosa: $(python3 -c 'import librosa; print(librosa.__version__)')"
+echo "  - fpcalc present: $(which fpcalc)"
+
+echo ""
+echo "🖼️ Visual Comparison:"
+python3 -c "
+import cv2
+print('  - opencv:', cv2.__version__)
+echo "✅ STATUS: ALL TOOLS OPERATIONAL"
+=== KALI VERIFICATION TOOLKIT STATUS ===
+
+📷 Image Protection:
+  - exiftool: 12.76
+  - steghide: steghide:unknowncommand"-h".
+  - convert/imagemagick: Version:ImageMagick6.9.12-98Q16x86_6418038https://legacy.imagemagick.org
+
+🎵 Audio Verification:
+  - fpcalc available: True
+  - librosa: 1.0.1
+  - fpcalc present: /usr/bin/fpcalc
+
+🖼️ Visual Comparison:
+  - opencv: 4.6.0
+
+✅ STATUS: ALL TOOLS OPERATIONAL 

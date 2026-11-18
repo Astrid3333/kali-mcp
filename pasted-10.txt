@@ -1,0 +1,45 @@
+astrid@astrid-B85-HD3-A:/opt$ # Opción A: Usar virtual environment (recomendado) 
+python3 -m venv /opt/venv_cme
+source /opt/venv_cme/bin/activate
+pip install -e .
+
+# Opción B: Usar pipx (ya está instalado)
+pipx install crackmapexec  # falló antes por paquete no disponible
+
+# Opción C: pasar --break-system-packages (no recomendado)
+pip install -e . --break-system-packages
+Error: [Errno 13] Permission denied: '/opt/venv_cme'
+bash: /opt/venv_cme/bin/activate: No such file or directory
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    See /usr/share/doc/python3.12/README.venv for more information.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+Fatal error from pip prevented installation. Full pip output in file:
+    /home/astrid/.local/state/pipx/log/cmd_2026-11-18_03.01.21_pip_errors.log
+
+Some possibly relevant errors from pip install:
+    ERROR: Could not find a version that satisfies the requirement crackmapexec (from versions: none)
+    ERROR: No matching distribution found for crackmapexec
+
+Error installing crackmapexec.
+Defaulting to user installation because normal site-packages is not writeable
+WARNING: Skipping /usr/lib/python3.12/dist-packages/pybind11-2.11.1.dist-info due to invalid metadata entry 'name'
+Obtaining file:///opt
+ERROR: file:///opt does not appear to be a Python project: neither 'setup.py' nor 'pyproject.toml' found.
+astrid@astrid-B85-HD3-A:/opt$ 
